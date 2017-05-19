@@ -42,7 +42,9 @@ public class GameWorld extends World
         }
         addObject(comp, 185, 290);
         addObject(user, 185, 610);
-        
+        Message m1 = new Message();
+        m1.setText("Welcome to Battleship");
+        addObject(m1, 200,200);
         
     }
 }
