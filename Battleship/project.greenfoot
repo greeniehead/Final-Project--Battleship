@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Fri May 19 10:35:51 PDT 2017
+#Fri May 19 10:57:51 PDT 2017
 target2.width=80
 target8.name=MainMenu
 target5.naviview.expanded=true
@@ -13,7 +13,7 @@ dependency9.to=CompBoard
 target1.height=50
 target8.y=10
 class.Ship1.superclass=greenfoot.Actor
-class.MainMenu.image=board.jpg
+class.MainMenu.image=battleshipscreen600x600.png
 target8.x=70
 target2.editor.width=900
 dependency2.type=UsesDependency

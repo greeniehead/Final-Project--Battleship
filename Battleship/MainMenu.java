@@ -11,6 +11,6 @@ public class MainMenu extends World
     {    
         super(600, 600, 1);
         Start star = new Start();
-        addObject(star, 300, 300);
+        addObject(star, 150, 300);
     }
 }
