@@ -44,6 +44,7 @@ public class GameWorld extends World
         addObject(comp, 185, 175);
         addObject(user, 185, 510);
         
+<<<<<<< HEAD
         /**if(Greenfoot.getMouseInfo(mouseClicked))
         {
             Ship1 pt = new Ship();
@@ -56,6 +57,16 @@ public class GameWorld extends World
         m1.setText("Welcome to Battleship");
         addObject(m1, 300,350);
 
+=======
+        if(Greenfoot.mouseClicked(this))
+        {
+            Ship1 pt = new Ship1();
+            addObject(pt, Greenfoot.getMouseInfo().getX(), Greenfoot.getMouseInfo().getY());
+        }
+
+        addObject(comp, 185, 290);
+        addObject(user, 185, 610);
+>>>>>>> origin/master
         
     }
 }
