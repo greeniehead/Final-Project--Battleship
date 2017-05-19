@@ -41,5 +41,8 @@ public class GameWorld extends World
         
         Ship1 pt = new Ship1();
         addObject(pt, 500, 600);
+        
+        Left lef = new Left();
+        addObject(lef, 500, 550);
     }
 }
