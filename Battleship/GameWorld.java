@@ -40,7 +40,8 @@ public class GameWorld extends World
                 addObject(til3, x, y);
             }
         }
-        addObject(comp, 85, 290);
-        addObject(user, 85, 610);
+        addObject(comp, 185, 290);
+        addObject(user, 185, 610);
+        
     }
 }
