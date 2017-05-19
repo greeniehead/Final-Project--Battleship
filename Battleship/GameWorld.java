@@ -40,6 +40,7 @@ public class GameWorld extends World
                 addObject(til3, x, y);
             }
         }
+<<<<<<< HEAD
         addObject(comp, 185, 175);
         addObject(user, 185, 510);
         
@@ -48,6 +49,13 @@ public class GameWorld extends World
             Ship1 pt = new Ship();
             addObject(pt, Greenfoot.getMouseInfo().getX(), Greenfoot.getMouseInfo().getY);
         }
+=======
+        addObject(comp, 185, 290);
+        addObject(user, 185, 610);
+        Message m1 = new Message();
+        m1.setText("Welcome to Battleship");
+        addObject(m1, 200,200);
+>>>>>>> origin/master
         
     }
 }
