@@ -20,8 +20,6 @@ public class GameWorld extends World
         addObject(en, 550, 550);
         Restart re = new Restart();
         addObject(re, 550, 475);
-        UserBoard user = new UserBoard();
-        CompBoard comp = new CompBoard();
         
         for(int x = 50; x < 350; x += 30)
         {
@@ -40,15 +38,8 @@ public class GameWorld extends World
                 addObject(til3, x, y);
             }
         }
-
-        addObject(comp, 185, 175);
-        addObject(user, 185, 510);
         
-        if(Greenfoot.mouseClicked(this))
-        {
-            Ship1 pt = new Ship1();
-            addObject(pt, Greenfoot.getMouseInfo().getX(), Greenfoot.getMouseInfo().getY());
-        }
-        
+        Ship1 pt = new Ship1();
+        addObject(pt, 500, 600);
     }
 }

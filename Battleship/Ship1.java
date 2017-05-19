@@ -14,6 +14,11 @@ public class Ship1 extends Actor
      */
     public void act() 
     {
-        // Add your action code here.
-    }    
+        
+    }
+    
+    public void moveLeft()
+    {
+        this.setLocation(this.getX()-30, this.getY());
+    }
 }
