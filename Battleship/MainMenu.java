@@ -12,6 +12,6 @@ public class MainMenu extends World
         super(600, 600, 1);
         setBackground("battleshipscreen600x600.png");
         Start star = new Start();
-        addObject(star, 150, 300);
+        addObject(star, 60, 300);
     }
 }

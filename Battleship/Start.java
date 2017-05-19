@@ -8,16 +8,20 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Start extends Actor
 {
-    /**
-     * Act - do whatever the Start wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    
     public void act() 
     {
+        GreenfootImage start;
+        start = new GreenfootImage("startimage.png");
+        setImage(start);
+        getImage().setTransparency(0);
+     
         if(Greenfoot.mouseClicked(this))
         {
             GameWorld gWorld = new GameWorld();
             Greenfoot.setWorld(gWorld);
+            
+          
         }
     }    
 }
