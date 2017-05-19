@@ -10,6 +10,7 @@ public class MainMenu extends World
     public MainMenu()
     {    
         super(600, 600, 1);
+        setBackground("battleshipscreen600x600.png");
         Start star = new Start();
         addObject(star, 150, 300);
     }
