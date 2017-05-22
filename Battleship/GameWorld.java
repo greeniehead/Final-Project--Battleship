@@ -1,5 +1,4 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
 /**
  * Write a description of class GameWorld here.
  * 
@@ -39,10 +38,22 @@ public class GameWorld extends World
             }
         }
         
-        Ship1 pt = new Ship1();
-        addObject(pt, 500, 600);
+        Patrol pt = new Patrol();
+        addObject(pt, 65, 645);
         
-        Left lef = new Left();
-        addObject(lef, 500, 550);
+        Submarine sub = new Submarine();
+        addObject(sub, 80, 615);
+        
+        Cruiser crui = new Cruiser();
+        addObject(crui, 80, 585);
+        
+        Battle batt = new Battle();
+        addObject(batt, 95, 555);
+        
+        Carrier carr = new Carrier();
+        addObject(carr, 110, 525);
+        
+        RotatePT rotPT = new RotatePT();
+        addObject(rotPT, 500, 500);
     }
 }
