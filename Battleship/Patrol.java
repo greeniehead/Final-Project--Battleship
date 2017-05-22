@@ -4,6 +4,9 @@ public class Patrol extends Actor
 {
     public void act()
     {
+        GreenfootImage pat;
+        pat = new GreenfootImage("patrol.png");
+        setImage(pat);
         if (Greenfoot.mouseDragged(this))
         {
             MouseInfo mouse = Greenfoot.getMouseInfo();
