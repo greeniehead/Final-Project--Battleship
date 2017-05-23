@@ -54,5 +54,16 @@ public class GameWorld extends World
         Carrier carr = new Carrier();
         addObject(carr, 110, 525);
         
+        
+        String[][] AIBoardArray = new String[10][10];
+        int counter = 0;
+        for(int x = 0; x < 10; x++){                
+                for(int y = 0; y < 10; y++){
+                    AIBoardArray[x][y] = "Empty";
+                }
+                    }
+            
+        
+        
     }
 }
