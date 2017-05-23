@@ -53,7 +53,5 @@ public class GameWorld extends World
         Carrier carr = new Carrier();
         addObject(carr, 110, 525);
         
-        RotatePT rotPT = new RotatePT();
-        addObject(rotPT, 500, 500);
     }
 }
