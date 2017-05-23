@@ -36,7 +36,8 @@ public class GameWorld extends World
                 Tile til3 = new Tile();
                 addObject(til3, x, y);
             }
-        }
+        }//THIS WILL GO IN AFTER THE POINT WHERE THE COMPUTER PLACES ITS SHIPS WHICH WILL BE
+         //IMMEDIATE IN THE FINAL CODE.  DO NOT FORGET TO FIX!!!!!
         
         Patrol pt = new Patrol();
         addObject(pt, 65, 645);
