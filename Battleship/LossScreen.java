@@ -15,9 +15,9 @@ public class LossScreen extends World
      */
     public LossScreen()
     {    
-        super(500, 500, 1);
+        super(1152, 648, 1);
         GreenfootImage loss;
-        loss = new GreenfootImage("LossScreen.png");
+        loss = new GreenfootImage("LoseScreen.png");
         this.setBackground(loss);
     }
 }
