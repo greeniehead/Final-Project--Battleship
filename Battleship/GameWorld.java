@@ -17,6 +17,10 @@ public class GameWorld extends World
         addObject(en, 550, 550);
         Restart re = new Restart();
         addObject(re, 550, 475);
+        WIN wi = new WIN();
+        addObject(wi, 550, 400);
+        LOSE los = new LOSE();
+        addObject(los, 550, 325);
         
         for(int x = 50; x < 350; x += 30)
         {
