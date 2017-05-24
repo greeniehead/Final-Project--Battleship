@@ -2,11 +2,16 @@ import greenfoot.*;
 
 public class Patrol extends Actor
 {
+    public int temp = 0;
     public void act()
     {
-        GreenfootImage pat;
-        pat = new GreenfootImage("patrol.png");
-        setImage(pat);
+        if(temp == 0)
+        {
+            GreenfootImage pat;
+            pat = new GreenfootImage("patrol.png");
+            setImage(pat);
+            temp++;
+        }
         
         
         if (Greenfoot.mouseDragged(this))
@@ -93,14 +98,6 @@ public class Patrol extends Actor
             }
         }
     }
-
-    public void horizontal()
-    {
-        this.setRotation(0);
-    }
     
-    public void vertical()
-    {
-        this.setRotation(90);
-    }
+    
 }

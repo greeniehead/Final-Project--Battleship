@@ -78,13 +78,5 @@ public class Submarine extends Actor
         }
     }
     
-    public void horizontal()
-    {
-        this.setRotation(0);
-    }
     
-    public void vertical()
-    {
-        this.setRotation(90);
-    }
 }

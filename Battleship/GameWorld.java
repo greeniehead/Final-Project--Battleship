@@ -1,17 +1,15 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-/**
- * Write a description of class GameWorld here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+import greenfoot.*;
+
 public class GameWorld extends World
 {
-
-    /**
-     * Constructor for objects of class GameWorld.
-     * 
-     */
+    public boolean game = true;
+    
+    
+    public Patrol pt = new Patrol();
+    public Submarine sub = new Submarine();
+    public Cruiser crui = new Cruiser();
+    public Battle batt = new Battle();
+    public Carrier carr = new Carrier();
     public GameWorld()
     {    
         super(600, 700, 1);
@@ -39,20 +37,24 @@ public class GameWorld extends World
         }//THIS WILL GO IN AFTER THE POINT WHERE THE COMPUTER PLACES ITS SHIPS WHICH WILL BE
          //IMMEDIATE IN THE FINAL CODE.  DO NOT FORGET TO FIX!!!!!
         
-        Patrol pt = new Patrol();
+        //Patrol pt = new Patrol();
         addObject(pt, 65, 645);
         
-        Submarine sub = new Submarine();
+        //Submarine sub = new Submarine();
         addObject(sub, 80, 615);
         
-        Cruiser crui = new Cruiser();
+        //Cruiser crui = new Cruiser();
         addObject(crui, 80, 585);
         
-        Battle batt = new Battle();
+        //Battle batt = new Battle();
         addObject(batt, 95, 555);
         
-        Carrier carr = new Carrier();
+        //Carrier carr = new Carrier();
         addObject(carr, 110, 525);
+        
+        Message place = new Message("Please place your ships");
+        addObject(place, 475, 200);
+        
         
         
         String[][] AIBoardArray = new String[10][10];
@@ -64,6 +66,73 @@ public class GameWorld extends World
                     }
             
         
+        /*
+        //the game will be played within this while loop
+        while(game)
+        {
+            
+            
+            
+            
+            
+            
+            
+            if(this.checkEnd())
+            {
+                if(this.checkWinner())//human win
+                {
+                    WinScreen win = new WinScreen();
+                    Greenfoot.setWorld(win);
+                }
+                else//computer win
+                {
+                    LossScreen loss = new LossScreen();
+                    Greenfoot.setWorld(loss);
+                }
+            }
+        }
+        */
+        sunk(pt);
         
+        
+        
+    }
+    
+    public void human()
+    {
+        
+    }
+    
+    public void computer()//computer decision code goes here
+    {
+        
+    }
+    
+    public boolean checkEnd()
+    {
+        return false;
+    }
+    
+    public boolean checkWinner()//returns true if human won and false if computer won
+    {
+        if(pt != null)
+        {
+            Message test = new Message("Test");
+            addObject(test, 475, 300);
+        }
+        else if(pt == null)
+        {
+            Message test2 = new Message("Test2");
+            addObject(test2, 475, 350);
+        }
+        return false;
+    }
+    
+    public void sunk(Actor ship)
+    {
+        if(ship == pt)
+        {
+            pt.setImage("ptSunk.png");
+        }
     }
 }
