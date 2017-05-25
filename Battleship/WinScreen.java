@@ -19,5 +19,8 @@ public class WinScreen extends World
         GreenfootImage win;
         win = new GreenfootImage("WinScreen.png");
         this.setBackground(win);
+        
+        End en = new End();
+        addObject(en, 250, 465);
     }
 }

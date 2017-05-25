@@ -22,9 +22,11 @@ public class GameWorld extends World
         LOSE los = new LOSE();
         addObject(los, 550, 325);
         
+        Miss mis = new Miss();
+        addObject(mis, 80, 260);
         for(int x = 50; x < 350; x += 30)
         {
-            for(int y = 25; y < 326; y += 30)
+            for(int y = 25; y < 325; y += 30)
             {
                 Tile til2 = new Tile();
                 addObject(til2, x, y);
@@ -96,6 +98,12 @@ public class GameWorld extends World
             }
         }
         */
+        Coord cord = new Coord("temp");
+        addObject(cord, 500, 300);
+        if(Greenfoot.mouseClicked(this))
+        {
+            fire(true, Greenfoot.getMouseInfo().getX(), Greenfoot.getMouseInfo().getY());
+        }
     }
     
     public void human()
@@ -139,5 +147,21 @@ public class GameWorld extends World
         {
             pt.setImage("ptSunk.png");
         }
+    }
+    
+    public void fire(boolean human, int x, int y)
+    {
+        
+        int x2 = x - 35;
+        if(human)
+        {
+            int y2 = y - 10;
+        }
+        else
+        {
+            int y2 = y - 360;
+        }
+        
+        removeObjects(getObjectsAt(x, y, null));
     }
 }

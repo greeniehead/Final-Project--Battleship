@@ -19,5 +19,8 @@ public class LossScreen extends World
         GreenfootImage loss;
         loss = new GreenfootImage("LoseScreen.png");
         this.setBackground(loss);
+        
+        Restart re = new Restart();
+        addObject(re, 800, 545);
     }
 }
