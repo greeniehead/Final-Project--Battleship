@@ -58,14 +58,16 @@ public class GameWorld extends World
         
         
         String[][] AIBoardArray = new String[10][10];
-        int counter = 0;
         for(int x = 0; x < 10; x++){                
                 for(int y = 0; y < 10; y++){
                     AIBoardArray[x][y] = "Empty";
                 }
                     }
-            
-        
+        AICruiser AIcrui = new AICruiser();   
+        addObject(AIcrui, AICruiser.placeCruiser()[0]*60, 200);
+        for(int i = 0; i < AICruiser.placeCruiser().length; i++){
+            System.out.println(AICruiser.placeCruiser()[i]);
+        }
         /*
         //the game will be played within this while loop
         while(game)
@@ -94,7 +96,7 @@ public class GameWorld extends World
         */
         sunk(pt);
         
-        
+       
         
     }
     
@@ -135,4 +137,9 @@ public class GameWorld extends World
             pt.setImage("ptSunk.png");
         }
     }
+    
+    
+    
+    
+    
 }
