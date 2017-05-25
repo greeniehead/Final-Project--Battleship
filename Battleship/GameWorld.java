@@ -4,7 +4,6 @@ public class GameWorld extends World
 {
     public boolean game = true;
     
-    
     public Patrol pt = new Patrol();
     public Submarine sub = new Submarine();
     public Cruiser crui = new Cruiser();
@@ -100,22 +99,17 @@ public class GameWorld extends World
             }
         }
         */
-<<<<<<< HEAD
+
         Coord cord = new Coord("temp");
         addObject(cord, 500, 300);
         if(Greenfoot.mouseClicked(this))
         {
             fire(true, Greenfoot.getMouseInfo().getX(), Greenfoot.getMouseInfo().getY());
         }
-=======
-<<<<<<< HEAD
+
+
         sunk(pt);
         
-       
-        
-=======
->>>>>>> origin/master
->>>>>>> origin/master
     }
     
     public void human()
@@ -161,7 +155,6 @@ public class GameWorld extends World
         }
     }
     
-<<<<<<< HEAD
     public void fire(boolean human, int x, int y)
     {
         
@@ -177,10 +170,4 @@ public class GameWorld extends World
         
         removeObjects(getObjectsAt(x, y, null));
     }
-=======
-    
-    
-    
-    
->>>>>>> origin/master
 }
