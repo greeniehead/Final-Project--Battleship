@@ -17,6 +17,10 @@ public class GameWorld extends World
         addObject(en, 550, 550);
         Restart re = new Restart();
         addObject(re, 550, 475);
+        WIN wi = new WIN();
+        addObject(wi, 550, 400);
+        LOSE los = new LOSE();
+        addObject(los, 550, 325);
         
         for(int x = 50; x < 350; x += 30)
         {
@@ -94,10 +98,13 @@ public class GameWorld extends World
             }
         }
         */
+<<<<<<< HEAD
         sunk(pt);
         
        
         
+=======
+>>>>>>> origin/master
     }
     
     public void human()
@@ -117,20 +124,25 @@ public class GameWorld extends World
     
     public boolean checkWinner()//returns true if human won and false if computer won
     {
-        if(pt != null)
+        if((pt!=null)||(sub!=null)||(crui!=null)||(batt!=null)||(carr!=null))
         {
+            /*
             Message test = new Message("Test");
             addObject(test, 475, 300);
+            */
+            return true;
         }
-        else if(pt == null)
+        else
         {
+            /*
             Message test2 = new Message("Test2");
             addObject(test2, 475, 350);
+            */
+            return false;
         }
-        return false;
     }
     
-    public void sunk(Actor ship)
+    public void sunk(Actor ship)//not working
     {
         if(ship == pt)
         {
