@@ -99,15 +99,8 @@ public class GameWorld extends World
             }
         }
         */
-
         Coord cord = new Coord("temp");
         addObject(cord, 500, 300);
-        if(Greenfoot.mouseClicked(this))
-        {
-            fire(true, Greenfoot.getMouseInfo().getX(), Greenfoot.getMouseInfo().getY());
-        }
-
-
         sunk(pt);
         
     }
