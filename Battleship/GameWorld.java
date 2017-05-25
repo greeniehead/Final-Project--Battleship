@@ -69,7 +69,10 @@ public class GameWorld extends World
                 }
                     }
         AICruiser AIcrui = new AICruiser();   
-        addObject(AIcrui, AICruiser.placeCruiser()[0]*60, 200);
+        addObject(AIcrui, AICruiser.placeCruiser()[0]*60, AICruiser.placeCruiser()[1]*30);
+        if(AICruiser.placeCruiser()[3] > 5) AIcrui.setRotation(90);
+        
+       
         for(int i = 0; i < AICruiser.placeCruiser().length; i++){
             System.out.println(AICruiser.placeCruiser()[i]);
         }
