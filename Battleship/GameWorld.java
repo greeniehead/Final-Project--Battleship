@@ -68,14 +68,22 @@ public class GameWorld extends World
                     AIBoardArray[x][y] = "Empty";
                 }
                     }
+                   
         AICruiser AIcrui = new AICruiser();   
         addObject(AIcrui, AICruiser.placeCruiser()[0]*60, AICruiser.placeCruiser()[1]*30);
         if(AICruiser.placeCruiser()[3] > 5) AIcrui.setRotation(90);
-        
        
-        for(int i = 0; i < AICruiser.placeCruiser().length; i++){
-            System.out.println(AICruiser.placeCruiser()[i]);
+      
+        AIPatrol AIpat = new AIPatrol();
+        addObject(AIpat, AIPatrol.placePatrol()[0]*60, AIPatrol.placePatrol()[1]*30);
+    
+        if(AIPatrol.placePatrol()[3] > 5) AIpat.setRotation(90);
+    
+       
+        for(int i = 0; i < AIPatrol.placePatrol().length; i++){
+        System.out.println(AIPatrol.placePatrol()[i]);
         }
+        
         /*
         //the game will be played within this while loop
         while(game)
