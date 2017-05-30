@@ -14,7 +14,7 @@ public class Start extends Actor
         GreenfootImage start;
         start = new GreenfootImage("startimage.png");
         setImage(start);
-        getImage().setTransparency(0);
+        //getImage().setTransparency(0);
      
         if(Greenfoot.mouseClicked(this))
         {
