@@ -1,13 +1,13 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-public class AIPatrol extends Actor
+public class AIBattle extends Actor
 {
     
     public void act() 
     {
-      GreenfootImage AIpat;
-      AIpat = new GreenfootImage("patrol.png");
-      setImage(AIpat);       
+      GreenfootImage AIbat;
+      AIbat = new GreenfootImage("batt.png");
+      setImage(AIbat);       
       if(this.getRotation() == 0){
           while((this.getX()-5)%30 != 0)
         {
@@ -34,11 +34,11 @@ public class AIPatrol extends Actor
         } */        
       if(this.getRotation() == 0)
             {
-                while(this.getX() < 65)
+                while(this.getX() < 95)
                 {
                     this.setLocation(this.getX()+1, this.getY());
                 }
-                while(this.getX() > 305)
+                while(this.getX() > 275)
                 {
                     this.setLocation(this.getX()-1, this.getY());
                 }
@@ -78,11 +78,11 @@ public class AIPatrol extends Actor
                 
     }    
     
-    public static int[] placePatrol(){
-       String[][] PatrolOnBoard = new String[10][10];
+    public static int[] placeBattle(){
+       String[][] BattleOnBoard = new String[10][10];
        for(int x = 0; x < 10; x++){                
                 for(int y = 0; y < 10; y++){
-                    PatrolOnBoard[x][y] = "Empty";                    
+                    BattleOnBoard[x][y] = "Empty";                    
                 }               
         }         
        int x = (int)(Math.random()*10);
@@ -92,56 +92,56 @@ public class AIPatrol extends Actor
        choices[0] = x;
        choices[1] = y;
        choices[2] = UpDownOrLeftRight;
-       PatrolOnBoard[x][y] = "P1";
+       BattleOnBoard[x][y] = "P1";
     
         if(x-5 <= 0 && choices[2] <= 5){
-           PatrolOnBoard[x+1][y] = "P2";
-           PatrolOnBoard[x+2][y] = "P3";
+           BattleOnBoard[x+1][y] = "P2";
+           BattleOnBoard[x+2][y] = "P3";
             //place P2 at x+1 on the gameboard array
         }
         else if (x-5 > 0 && choices[2] <= 5){
-           PatrolOnBoard[x-1][y] = "P2";
-           PatrolOnBoard[x-2][y] = "P3";
+           BattleOnBoard[x-1][y] = "P2";
+           BattleOnBoard[x-2][y] = "P3";
             //place P2 at x-1 on the gameboard array
         }
         else if(y-5 <= 0 && choices[2] > 5){
             //System.out.println("HI!!!");
-           PatrolOnBoard[x][y+1] = "P2";
-           PatrolOnBoard[x][y+2] = "P3";
+           BattleOnBoard[x][y+1] = "P2";
+           BattleOnBoard[x][y+2] = "P3";
             //place P2 at y+1 on the gameboard array
         }
         else if(y-5 > 0 && choices[2] > 5){
     
-            PatrolOnBoard[x][y-1] = "P2";
-            PatrolOnBoard[x][y-2] = "P3";
+            BattleOnBoard[x][y-1] = "P2";
+            BattleOnBoard[x][y-2] = "P3";
             //place P2 at y-1 on the gameboard array
         }
-        /*for(int row =0;row<PatrolOnBoard.length; row++){
-           for(int col = 0; col<PatrolOnBoard[0].length;col++){ 
-               System.out.print(PatrolOnBoard[row][col] + " ");
+        /*for(int row =0;row<BattleOnBoard.length; row++){
+           for(int col = 0; col<BattleOnBoard[0].length;col++){ 
+               System.out.print(BattleOnBoard[row][col] + " ");
             }
             System.out.println();
         } */
-       int[] PatrolCoords = new int[6]  ;  
-        for(int row =0;row<PatrolOnBoard.length; row++){
-               for(int col = 0; col<PatrolOnBoard[0].length;col++){     
-                   if(PatrolOnBoard[row][col].equals("P1")){ 
-                       PatrolCoords[0] = row;
-                       PatrolCoords[1] = col;
+       int[] BattleCoords = new int[6]  ;  
+        for(int row =0;row<BattleOnBoard.length; row++){
+               for(int col = 0; col<BattleOnBoard[0].length;col++){     
+                   if(BattleOnBoard[row][col].equals("P1")){ 
+                       BattleCoords[0] = row;
+                       BattleCoords[1] = col;
                     }
-                   else if(PatrolOnBoard[row][col].equals("P2")){ 
-                       PatrolCoords[2] = row;
-                       PatrolCoords[3] = col;
+                   else if(BattleOnBoard[row][col].equals("P2")){ 
+                       BattleCoords[2] = row;
+                       BattleCoords[3] = col;
                     }
-                   else if(PatrolOnBoard[row][col].equals("P3")){ 
-                       PatrolCoords[4] = row;
-                       PatrolCoords[5] = col;
+                   else if(BattleOnBoard[row][col].equals("P3")){ 
+                       BattleCoords[4] = row;
+                       BattleCoords[5] = col;
                     } 
                     
                 }
             }
-       PatrolCoords[3] = UpDownOrLeftRight;
-       return PatrolCoords;
+       BattleCoords[3] = UpDownOrLeftRight;
+       return BattleCoords;
        
         }
 }

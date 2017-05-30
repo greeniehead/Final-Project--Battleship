@@ -73,17 +73,30 @@ public class GameWorld extends World
         AICruiser AIcrui = new AICruiser();   
         addObject(AIcrui, AICruiser.placeCruiser()[0]*60, AICruiser.placeCruiser()[1]*30);
         if(AICruiser.placeCruiser()[3] > 5) AIcrui.setRotation(90);
+        
+        AISub AIsub = new AISub();   
+        addObject(AIsub, AISub.placeSub()[0]*60, AISub.placeSub()[1]*30);
+        if(AISub.placeSub()[3] > 5) AIsub.setRotation(90);
        
-      
+        
         AIPatrol AIpat = new AIPatrol();
         addObject(AIpat, AIPatrol.placePatrol()[0]*60, AIPatrol.placePatrol()[1]*30);
-    
         if(AIPatrol.placePatrol()[3] > 5) AIpat.setRotation(90);
+        
+        AIBattle AIbat = new AIBattle();
+        addObject(AIbat, AIBattle.placeBattle()[0]*60, AIBattle.placeBattle()[1]*30);
+        if(AIBattle.placeBattle()[3] > 5) AIbat.setRotation(90);
+        
+        AICarrier AIcarr = new AICarrier();
+        addObject(AIcarr, AICarrier.placeCarrier()[0]*60, AICarrier.placeCarrier()[1]*30);
+        if(AICarrier.placeCarrier()[3] > 5) AIcarr.setRotation(90);
+    
+    
+    
+        
     
        
-        for(int i = 0; i < AIPatrol.placePatrol().length; i++){
-        System.out.println(AIPatrol.placePatrol()[i]);
-        }
+       
         
         /*
         //the game will be played within this while loop
