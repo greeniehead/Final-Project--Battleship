@@ -5,7 +5,7 @@ public class Cruiser extends Actor
     public void act() 
     {
         GreenfootImage cru;
-        cru = new GreenfootImage("sub.png");
+        cru = new GreenfootImage("sub2.fw.png");
         setImage(cru);
         if (Greenfoot.mouseDragged(this))
         {

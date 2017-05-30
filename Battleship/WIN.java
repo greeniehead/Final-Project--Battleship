@@ -14,6 +14,9 @@ public class WIN extends Actor
      */
     public void act() 
     {
+        GreenfootImage wiz = new GreenfootImage("button-green.png");
+        setImage(wiz);
+        
         if(Greenfoot.mouseClicked(this))
         {
             WinScreen win = new WinScreen();

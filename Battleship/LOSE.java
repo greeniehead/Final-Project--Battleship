@@ -14,6 +14,8 @@ public class LOSE extends Actor
      */
     public void act() 
     {
+        GreenfootImage lozz = new GreenfootImage("button-blue.png");
+        setImage(lozz);
         if(Greenfoot.mouseClicked(this))
         {
             LossScreen loss = new LossScreen();

@@ -15,12 +15,12 @@ public class LossScreen extends World
      */
     public LossScreen()
     {    
-        super(1152, 648, 1);
+        super(598, 548, 1);
         GreenfootImage loss;
-        loss = new GreenfootImage("LoseScreen.png");
+        loss = new GreenfootImage("NewLose.png");
         this.setBackground(loss);
         
         Restart re = new Restart();
-        addObject(re, 800, 545);
+        addObject(re, 475, 225);
     }
 }
