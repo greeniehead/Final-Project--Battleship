@@ -2,6 +2,7 @@ import greenfoot.*;
 
 public class GameWorld extends World
 {
+    public static boolean firing = false;
     public boolean game = true;
     
     public Patrol pt = new Patrol();
@@ -112,8 +113,8 @@ public class GameWorld extends World
         */
         Coord cord = new Coord("temp");
         addObject(cord, 500, 300);
-        sunk(pt);
         
+        //playTest();
     }
     
     public void human()
@@ -147,10 +148,11 @@ public class GameWorld extends World
             Message test2 = new Message("Test2");
             addObject(test2, 475, 350);
             */
+            
             return false;
         }
     }
-    
+    /*
     public void sunk(Actor ship)//not working
     {
         if(ship == pt)
@@ -158,7 +160,8 @@ public class GameWorld extends World
             pt.setImage("ptSunk.png");
         }
     }
-    
+    */
+    /*
     public void fire(boolean human, int x, int y)
     {
         
@@ -174,4 +177,39 @@ public class GameWorld extends World
         
         removeObjects(getObjectsAt(x, y, null));
     }
+    
+    public static void setFiring(boolean fir)
+    {
+        if(fir)
+        {
+            firing = true;
+        }
+        else
+        {
+            firing = false;
+        }
+    }
+    
+    public static boolean getFiring()
+    {
+        return firing;
+    }
+    
+    public void playTest()
+    {
+        boolean tfTemp = true;
+        while(tfTemp)
+        {
+            String key2 = Greenfoot.getKey();
+            if(key2.equals("g"))
+            {
+                tfTemp = false;
+            }
+            if(key2.equals("f"))
+            {
+                firing = true;
+            }
+        }
+    }
+    */
 }
