@@ -6,7 +6,7 @@ public class AIPatrol extends Actor
     public void act() 
     {
       GreenfootImage AIpat;
-      AIpat = new GreenfootImage("patrol.png");
+      AIpat = new GreenfootImage("patrol2.fw.png");
       setImage(AIpat);       
       if(this.getRotation() == 0){
           while((this.getX()-5)%30 != 0)

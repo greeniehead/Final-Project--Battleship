@@ -15,7 +15,7 @@ public class AICruiser extends Actor
     public void act() 
     {
       GreenfootImage AIcru;
-      AIcru = new GreenfootImage("sub.png");
+      AIcru = new GreenfootImage("sub2.fw.png");
       setImage(AIcru);       
       while((this.getX()-80)%30 != 0)
         {

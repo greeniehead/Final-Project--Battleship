@@ -12,7 +12,7 @@ public class AISub extends Actor
     public void act() 
     {
       GreenfootImage AISub;
-      AISub = new GreenfootImage("sub.png");
+      AISub = new GreenfootImage("sub2.fw.png");
       setImage(AISub);       
       while((this.getX()-80)%30 != 0)
         {

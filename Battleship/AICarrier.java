@@ -12,7 +12,7 @@ public class AICarrier extends Actor
     public void act() 
     {
       GreenfootImage AICarr;
-      AICarr = new GreenfootImage("carrier.png");
+      AICarr = new GreenfootImage("carrier2.fw.png");
       setImage(AICarr);       
       while((this.getX()-80)%30 != 0)
         {

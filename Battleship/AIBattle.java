@@ -6,7 +6,7 @@ public class AIBattle extends Actor
     public void act() 
     {
       GreenfootImage AIbat;
-      AIbat = new GreenfootImage("batt.png");
+      AIbat = new GreenfootImage("batt2.fw.png");
       setImage(AIbat);       
       if(this.getRotation() == 0){
           while((this.getX()-5)%30 != 0)
