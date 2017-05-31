@@ -14,24 +14,22 @@ public class Tile extends Actor
      */
     public void act() 
     {
-        /*
-        if(((getWorld().getBackground()).toString()).equals("bluerock.jpg"))
+
+        if(GameWorld.getFiring())
         {
-            if(GameWorld.getFiring())
+            if(Greenfoot.mouseClicked(this))
             {
-                if(Greenfoot.mouseClicked(this))
-                {
-                    this.removeSelf();
-                }
+                this.removeSelf();
             }
         }
-        */
+
+        
     }
-    /*
+    
     public void removeSelf()
     {
         GameWorld.setFiring(false);
         getWorld().removeObject(this);
     }
-    */
+    
 }

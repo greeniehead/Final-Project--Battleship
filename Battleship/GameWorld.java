@@ -28,10 +28,30 @@ public class GameWorld extends World
         {
             for(int y = 25; y < 325; y += 30)
             {
+                Miss mis2 = new Miss();
+                addObject(mis2, x, y);
+            }
+        }
+        for(int x = 50; x < 350; x += 30)
+        {
+            for(int y = 375; y < 651; y += 30)
+            {
+                Miss mis3 = new Miss();
+                addObject(mis3, x, y);
+            }
+        }
+        
+        
+        /*
+        for(int x = 50; x < 350; x += 30)
+        {
+            for(int y = 25; y < 325; y += 30)
+            {
                 Tile til2 = new Tile();
                 addObject(til2, x, y);
             }
         }
+        */
         
         for(int x = 50; x < 350; x += 30)
         {
@@ -40,8 +60,8 @@ public class GameWorld extends World
                 Tile til3 = new Tile();
                 addObject(til3, x, y);
             }
-        }//THIS WILL GO IN AFTER THE POINT WHERE THE COMPUTER PLACES ITS SHIPS WHICH WILL BE
-         //IMMEDIATE IN THE FINAL CODE.  DO NOT FORGET TO FIX!!!!!
+        }
+        
         
         //Patrol pt = new Patrol();
         addObject(pt, 65, 645);
@@ -90,13 +110,44 @@ public class GameWorld extends World
         AICarrier AIcarr = new AICarrier();
         addObject(AIcarr, AICarrier.placeCarrier()[0]*60, AICarrier.placeCarrier()[1]*30);
         if(AICarrier.placeCarrier()[3] > 5) AIcarr.setRotation(90);
-    
-    
-    
+        /*
+        for(int x = 50; x < 350; x += 30)
+        {
+            for(int y = 25; y < 325; y += 30)
+            {
+                Hit hit1 = new Hit();
+                if((getObjectsAt(x, y, AIPatrol.class)).contains(AIpat))
+                {
+                    addObject(hit1, x, y);
+                }
+                else if(getObjectsAt(x, y, AICruiser.class).size() != 0)
+                {
+                    addObject(hit1, x, y);
+                }
+                else if(getObjectsAt(x, y, AICarrier.class).size() != 0)
+                {
+                    addObject(hit1, x, y);
+                }
+                else if(getObjectsAt(x, y, AISub.class).size() != 0)
+                {
+                    addObject(hit1, x, y);
+                }
+                else if(getObjectsAt(x, y, AIBattle.class).size() != 0)
+                {
+                    addObject(hit1, x, y);
+                }
+            }
+        }
+        */
         
-    
-       
-       
+        for(int x = 50; x < 350; x += 30)
+        {
+            for(int y = 25; y < 325; y += 30)
+            {
+                Tile til2 = new Tile();
+                addObject(til2, x, y);
+            }
+        }
         
         /*
         //the game will be played within this while loop
@@ -127,7 +178,8 @@ public class GameWorld extends World
         Coord cord = new Coord("temp");
         addObject(cord, 500, 300);
         
-        //playTest();
+        Fire firee = new Fire();
+        addObject(firee, 425, 450);
     }
     
     public void human()
@@ -174,7 +226,7 @@ public class GameWorld extends World
         }
     }
     */
-    /*
+    
     public void fire(boolean human, int x, int y)
     {
         
@@ -208,21 +260,4 @@ public class GameWorld extends World
         return firing;
     }
     
-    public void playTest()
-    {
-        boolean tfTemp = true;
-        while(tfTemp)
-        {
-            String key2 = Greenfoot.getKey();
-            if(key2.equals("g"))
-            {
-                tfTemp = false;
-            }
-            if(key2.equals("f"))
-            {
-                firing = true;
-            }
-        }
-    }
-    */
 }
