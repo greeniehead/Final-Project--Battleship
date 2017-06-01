@@ -9,4 +9,11 @@ comment3.params=
 comment3.target=boolean\ checkEnd()
 comment4.params=
 comment4.target=boolean\ checkWinner()
-numComments=5
+comment5.params=human\ x\ y
+comment5.target=void\ fire(boolean,\ int,\ int)
+comment5.text=\r\n\ \ \ \ public\ void\ sunk(Actor\ ship)//not\ working\r\n\ \ \ \ {\r\n\ \ \ \ \ \ \ \ if(ship\ \=\=\ pt)\r\n\ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ pt.setImage("ptSunk.png");\r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ }\r\n
+comment6.params=fir
+comment6.target=void\ setFiring(boolean)
+comment7.params=
+comment7.target=boolean\ getFiring()
+numComments=8
