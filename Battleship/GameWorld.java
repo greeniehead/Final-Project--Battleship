@@ -1,4 +1,5 @@
 import greenfoot.*;
+import java.util.List;
 
 public class GameWorld extends World
 {
@@ -73,22 +74,33 @@ public class GameWorld extends World
         AICruiser AIcrui = new AICruiser();   
         addObject(AIcrui, AICruiser.placeCruiser()[0]*60, AICruiser.placeCruiser()[1]*30);
         if(AICruiser.placeCruiser()[3] > 5) AIcrui.setRotation(90);
+        int AICruiX = AIcrui.getX();
+        int AICruiY = AIcrui.getY();
         
-        AISub AIsub = new AISub();   
-        addObject(AIsub, AISub.placeSub()[0]*60, AISub.placeSub()[1]*30);
-        if(AISub.placeSub()[3] > 5) AIsub.setRotation(90);
        
         
+        AISub AIsub = new AISub();   
+        int AISubX = AISub.placeSub()[0]*60;
+        int AISubY = AISub.placeSub()[1]*30;
+        addObject(AIsub, AISubX, AISubY);
+        if(AISub.placeSub()[3] > 5) AIsub.setRotation(90);
+                 
         AIPatrol AIpat = new AIPatrol();
-        addObject(AIpat, AIPatrol.placePatrol()[0]*60, AIPatrol.placePatrol()[1]*30);
+        int AIPatX = AIPatrol.placePatrol()[0]*60;
+        int AIPatY = AIPatrol.placePatrol()[1]*30;
+        addObject(AIpat, AIPatX, AIPatY);    
         if(AIPatrol.placePatrol()[3] > 5) AIpat.setRotation(90);
-        
+             
         AIBattle AIbat = new AIBattle();
-        addObject(AIbat, AIBattle.placeBattle()[0]*60, AIBattle.placeBattle()[1]*30);
+        int AIBatX = AIBattle.placeBattle()[0]*60;
+        int AIBatY = AIBattle.placeBattle()[1]*30;
+        addObject(AIbat, AIBatX, AIBatY);
         if(AIBattle.placeBattle()[3] > 5) AIbat.setRotation(90);
-        
+                
         AICarrier AIcarr = new AICarrier();
-        addObject(AIcarr, AICarrier.placeCarrier()[0]*60, AICarrier.placeCarrier()[1]*30);
+        int AICarrX = AICarrier.placeCarrier()[0]*60;
+        int AICarrY = AICarrier.placeCarrier()[1]*30;
+        addObject(AIcarr, AICarrX, AICarrY);
         if(AICarrier.placeCarrier()[3] > 5) AIcarr.setRotation(90);
     
     
@@ -97,6 +109,11 @@ public class GameWorld extends World
     
        
        
+        
+       
+        
+        
+        
         
         /*
         //the game will be played within this while loop
