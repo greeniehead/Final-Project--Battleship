@@ -60,6 +60,11 @@ public class AICarrier extends Actor
                     this.setLocation(this.getX(), this.getY()+1);
                 }
             }  
+      while(this.getIntersectingObjects(null).size() > 5){
+        this.setLocation(this.getX()-(int)(Math.random()*10)-10, this.getY()-(int)(Math.random()*10)-10); 
+        }
+         
+        
                 
     }    
     
