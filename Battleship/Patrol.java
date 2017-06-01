@@ -8,7 +8,7 @@ public class Patrol extends Actor
         if(temp == 0)
         {
             GreenfootImage pat;
-            pat = new GreenfootImage("patrol.png");
+            pat = new GreenfootImage("patrol2.fw.png");
             setImage(pat);
             temp++;
         }

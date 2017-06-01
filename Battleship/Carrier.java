@@ -5,7 +5,7 @@ public class Carrier extends Actor
     public void act() 
     {
         GreenfootImage car;
-        car = new GreenfootImage("carrier.png");
+        car = new GreenfootImage("carrier2.fw.png");
         setImage(car);
         if (Greenfoot.mouseDragged(this))
         {

@@ -9,13 +9,13 @@ public class MainMenu extends World
      */
     public MainMenu()
     {    
-        super(600, 600, 1);
-        setBackground("battleshipscreen600x600.png");
+        super(1071, 600, 1);
+        setBackground("goodstartmenu.png");
         Start star = new Start();
-        addObject(star, 60, 300);
+        addObject(star, 220, 123);
         star.getImage().setTransparency(0);
         Quit quitButton = new Quit();
-        addObject(quitButton, 60, 400);
+        addObject(quitButton, 900, 123);
         quitButton.getImage().setTransparency(0);
     }
 }

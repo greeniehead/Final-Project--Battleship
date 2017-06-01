@@ -20,6 +20,6 @@ public class Message extends Actor
      
     private void updateImage(String text)
     {
-        setImage(new GreenfootImage(text, 30, Color.black, Color.blue));
+        setImage(new GreenfootImage(text, 30, Color.black, Color.white));
     }
 }

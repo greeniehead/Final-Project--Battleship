@@ -5,7 +5,7 @@ public class Submarine extends Actor
     public void act() 
     {
         GreenfootImage sub;
-        sub = new GreenfootImage("sub.png");
+        sub = new GreenfootImage("sub2.fw.png");
         setImage(sub);
         if (Greenfoot.mouseDragged(this))
         {

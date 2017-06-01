@@ -14,6 +14,22 @@ public class Tile extends Actor
      */
     public void act() 
     {
-        // Add your action code here.
-    }    
+
+        if(GameWorld.getFiring())
+        {
+            if(Greenfoot.mouseClicked(this))
+            {
+                this.removeSelf();
+            }
+        }
+
+        
+    }
+    
+    public void removeSelf()
+    {
+        GameWorld.setFiring(false);
+        getWorld().removeObject(this);
+    }
+    
 }

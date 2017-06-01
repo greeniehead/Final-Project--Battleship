@@ -2,8 +2,8 @@ import greenfoot.*;
 
 public class GameWorld extends World
 {
+    public static boolean firing = false;
     public boolean game = true;
-    
     
     public Patrol pt = new Patrol();
     public Submarine sub = new Submarine();
@@ -17,15 +17,41 @@ public class GameWorld extends World
         addObject(en, 550, 550);
         Restart re = new Restart();
         addObject(re, 550, 475);
+        WIN wi = new WIN();
+        addObject(wi, 550, 400);
+        LOSE los = new LOSE();
+        addObject(los, 550, 325);
         
+        Miss mis = new Miss();
+        addObject(mis, 80, 260);
         for(int x = 50; x < 350; x += 30)
         {
-            for(int y = 25; y < 326; y += 30)
+            for(int y = 25; y < 325; y += 30)
+            {
+                Miss mis2 = new Miss();
+                addObject(mis2, x, y);
+            }
+        }
+        for(int x = 50; x < 350; x += 30)
+        {
+            for(int y = 375; y < 651; y += 30)
+            {
+                Miss mis3 = new Miss();
+                addObject(mis3, x, y);
+            }
+        }
+        
+        
+        /*
+        for(int x = 50; x < 350; x += 30)
+        {
+            for(int y = 25; y < 325; y += 30)
             {
                 Tile til2 = new Tile();
                 addObject(til2, x, y);
             }
         }
+        */
         
         for(int x = 50; x < 350; x += 30)
         {
@@ -34,8 +60,8 @@ public class GameWorld extends World
                 Tile til3 = new Tile();
                 addObject(til3, x, y);
             }
-        }//THIS WILL GO IN AFTER THE POINT WHERE THE COMPUTER PLACES ITS SHIPS WHICH WILL BE
-         //IMMEDIATE IN THE FINAL CODE.  DO NOT FORGET TO FIX!!!!!
+        }
+        
         
         //Patrol pt = new Patrol();
         addObject(pt, 65, 645);
@@ -58,13 +84,70 @@ public class GameWorld extends World
         
         
         String[][] AIBoardArray = new String[10][10];
-        int counter = 0;
         for(int x = 0; x < 10; x++){                
                 for(int y = 0; y < 10; y++){
                     AIBoardArray[x][y] = "Empty";
                 }
                     }
-            
+                   
+        AICruiser AIcrui = new AICruiser();   
+        addObject(AIcrui, AICruiser.placeCruiser()[0]*60, AICruiser.placeCruiser()[1]*30);
+        if(AICruiser.placeCruiser()[3] > 5) AIcrui.setRotation(90);
+        
+        AISub AIsub = new AISub();   
+        addObject(AIsub, AISub.placeSub()[0]*60, AISub.placeSub()[1]*30);
+        if(AISub.placeSub()[3] > 5) AIsub.setRotation(90);
+       
+        
+        AIPatrol AIpat = new AIPatrol();
+        addObject(AIpat, AIPatrol.placePatrol()[0]*60, AIPatrol.placePatrol()[1]*30);
+        if(AIPatrol.placePatrol()[3] > 5) AIpat.setRotation(90);
+        
+        AIBattle AIbat = new AIBattle();
+        addObject(AIbat, AIBattle.placeBattle()[0]*60, AIBattle.placeBattle()[1]*30);
+        if(AIBattle.placeBattle()[3] > 5) AIbat.setRotation(90);
+        
+        AICarrier AIcarr = new AICarrier();
+        addObject(AIcarr, AICarrier.placeCarrier()[0]*60, AICarrier.placeCarrier()[1]*30);
+        if(AICarrier.placeCarrier()[3] > 5) AIcarr.setRotation(90);
+        /*
+        for(int x = 50; x < 350; x += 30)
+        {
+            for(int y = 25; y < 325; y += 30)
+            {
+                Hit hit1 = new Hit();
+                if((getObjectsAt(x, y, AIPatrol.class)).contains(AIpat))
+                {
+                    addObject(hit1, x, y);
+                }
+                else if(getObjectsAt(x, y, AICruiser.class).size() != 0)
+                {
+                    addObject(hit1, x, y);
+                }
+                else if(getObjectsAt(x, y, AICarrier.class).size() != 0)
+                {
+                    addObject(hit1, x, y);
+                }
+                else if(getObjectsAt(x, y, AISub.class).size() != 0)
+                {
+                    addObject(hit1, x, y);
+                }
+                else if(getObjectsAt(x, y, AIBattle.class).size() != 0)
+                {
+                    addObject(hit1, x, y);
+                }
+            }
+        }
+        */
+        
+        for(int x = 50; x < 350; x += 30)
+        {
+            for(int y = 25; y < 325; y += 30)
+            {
+                Tile til2 = new Tile();
+                addObject(til2, x, y);
+            }
+        }
         
         /*
         //the game will be played within this while loop
@@ -92,10 +175,11 @@ public class GameWorld extends World
             }
         }
         */
-        sunk(pt);
+        Coord cord = new Coord("temp");
+        addObject(cord, 500, 300);
         
-        
-        
+        Fire firee = new Fire();
+        addObject(firee, 425, 450);
     }
     
     public void human()
@@ -115,24 +199,65 @@ public class GameWorld extends World
     
     public boolean checkWinner()//returns true if human won and false if computer won
     {
-        if(pt != null)
+        if((pt!=null)||(sub!=null)||(crui!=null)||(batt!=null)||(carr!=null))
         {
+            /*
             Message test = new Message("Test");
             addObject(test, 475, 300);
+            */
+            return true;
         }
-        else if(pt == null)
+        else
         {
+            /*
             Message test2 = new Message("Test2");
             addObject(test2, 475, 350);
+            */
+            
+            return false;
         }
-        return false;
     }
-    
-    public void sunk(Actor ship)
+    /*
+    public void sunk(Actor ship)//not working
     {
         if(ship == pt)
         {
             pt.setImage("ptSunk.png");
         }
     }
+    */
+    
+    public void fire(boolean human, int x, int y)
+    {
+        
+        int x2 = x - 35;
+        if(human)
+        {
+            int y2 = y - 10;
+        }
+        else
+        {
+            int y2 = y - 360;
+        }
+        
+        removeObjects(getObjectsAt(x, y, null));
+    }
+    
+    public static void setFiring(boolean fir)
+    {
+        if(fir)
+        {
+            firing = true;
+        }
+        else
+        {
+            firing = false;
+        }
+    }
+    
+    public static boolean getFiring()
+    {
+        return firing;
+    }
+    
 }

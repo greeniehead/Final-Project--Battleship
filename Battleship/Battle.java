@@ -5,7 +5,7 @@ public class Battle extends Actor
     public void act() 
     {
         GreenfootImage batt;
-        batt = new GreenfootImage("batt.png");
+        batt = new GreenfootImage("batt2.fw.png");
         setImage(batt);
         if (Greenfoot.mouseDragged(this))
         {
