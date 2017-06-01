@@ -60,10 +60,10 @@ public class AISub extends Actor
                     this.setLocation(this.getX(), this.getY()+1);
                 }
             }  
-       while(this.getIntersectingObjects(null).size() > 3){
-          this.setLocation(this.getX()-(int)(Math.random()*10)-10, this.getY()+(int)(Math.random()*10-10));
-        } 
-                
+      /*while(this.getIntersectingObjects(null).size() > 3 ){
+          this.setLocation(this.getX()+(int)(Math.random()*10)-10, this.getY()-(int)(Math.random()*10)-10);
+          
+        } */  
     }    
     
     public static int[] placeSub(){

@@ -28,7 +28,10 @@ public class AIBattle extends Actor
             this.setLocation(this.getX(), this.getY() + 1);
         }  
         } 
-           
+      /*while((this.getY()-505)%30 != 0)
+        {
+            this.setLocation(this.getX(), this.getY() + 1);
+        } */        
       if(this.getRotation() == 0)
             {
                 while(this.getX() < 95)
@@ -63,7 +66,7 @@ public class AIBattle extends Actor
                 {
                     this.setLocation(this.getX()-1, this.getY());
                 }
-                while(this.getY() > 265)
+                while(this.getY() > 310)
                 {
                     this.setLocation(this.getX(), this.getY()-1);
                 }
@@ -72,10 +75,10 @@ public class AIBattle extends Actor
                     this.setLocation(this.getX(), this.getY()+1);
                 }
             }  
-      while(this.getIntersectingObjects(null).size() > 4 ){
+      /*while(this.getIntersectingObjects(null).size() > 4 ){
           this.setLocation(this.getX()+(int)(Math.random()*10)-10, this.getY()-(int)(Math.random()*10)-10);
           
-        }           
+        }  */
     }    
     
     public static int[] placeBattle(){
