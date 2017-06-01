@@ -1,4 +1,12 @@
 import greenfoot.*;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import java.util.*;
+=======
+import java.util.List;
+>>>>>>> origin/master
+>>>>>>> origin/master
 
 public class GameWorld extends World
 {
@@ -22,8 +30,7 @@ public class GameWorld extends World
         LOSE los = new LOSE();
         addObject(los, 550, 325);
         
-        Miss mis = new Miss();
-        addObject(mis, 80, 260);
+        
         for(int x = 50; x < 350; x += 30)
         {
             for(int y = 25; y < 325; y += 30)
@@ -32,6 +39,7 @@ public class GameWorld extends World
                 addObject(mis2, x, y);
             }
         }
+        
         for(int x = 50; x < 350; x += 30)
         {
             for(int y = 375; y < 651; y += 30)
@@ -102,43 +110,70 @@ public class GameWorld extends World
         AIPatrol AIpat = new AIPatrol();
         addObject(AIpat, AIPatrol.placePatrol()[0]*60, AIPatrol.placePatrol()[1]*30);
         if(AIPatrol.placePatrol()[3] > 5) AIpat.setRotation(90);
+<<<<<<< HEAD
         
+=======
+<<<<<<< HEAD
+        
+        
+=======
+             
+>>>>>>> origin/master
+>>>>>>> origin/master
         AIBattle AIbat = new AIBattle();
         addObject(AIbat, AIBattle.placeBattle()[0]*60, AIBattle.placeBattle()[1]*30);
         if(AIBattle.placeBattle()[3] > 5) AIbat.setRotation(90);
+<<<<<<< HEAD
         
+=======
+<<<<<<< HEAD
+        /*
+        System.out.println(getObjectsAt(80, 25, null).size());
+        System.out.println(getObjectsAt(95, 25, null).size());
+        AIBattle AIbat = new AIBattle();
+        addObject(AIbat, 95, 25);
+        //if(AIBattle.placeBattle()[3] > 5) AIbat.setRotation(90);
+        System.out.println(getObjectsAt(80, 25, null).size());
+        System.out.println(getObjectsAt(80, 25, null).get(0).toString());
+        System.out.println(getObjectsAt(95, 25, null).size());
+        System.out.println(getObjectsAt(95, 25, null).get(0).toString());
+        */
+=======
+                
+>>>>>>> origin/master
+>>>>>>> origin/master
         AICarrier AIcarr = new AICarrier();
         addObject(AIcarr, AICarrier.placeCarrier()[0]*60, AICarrier.placeCarrier()[1]*30);
         if(AICarrier.placeCarrier()[3] > 5) AIcarr.setRotation(90);
-        /*
+        
+        int count = 0;
+        int arrLength;
         for(int x = 50; x < 350; x += 30)
         {
             for(int y = 25; y < 325; y += 30)
             {
-                Hit hit1 = new Hit();
-                if((getObjectsAt(x, y, AIPatrol.class)).contains(AIpat))
+                
+                arrLength = getObjectsAt(x, y, null).size();
+                Hit hitt = new Hit();
+                //System.out.println(arrLength);
+                /*
+                for(int i = 0; i < arrLength; i++)
                 {
-                    addObject(hit1, x, y);
+                    System.out.println(getObjectsAt(x, y, null).get(i).toString());
                 }
-                else if(getObjectsAt(x, y, AICruiser.class).size() != 0)
+                */
+                if((arrLength != 1)&&(arrLength != 0))
                 {
-                    addObject(hit1, x, y);
+                    addObject(hitt, x, y);
+                    count++;
                 }
-                else if(getObjectsAt(x, y, AICarrier.class).size() != 0)
-                {
-                    addObject(hit1, x, y);
-                }
-                else if(getObjectsAt(x, y, AISub.class).size() != 0)
-                {
-                    addObject(hit1, x, y);
-                }
-                else if(getObjectsAt(x, y, AIBattle.class).size() != 0)
-                {
-                    addObject(hit1, x, y);
-                }
+                
             }
         }
-        */
+        System.out.println(count);
+        
+        
+        
         
         for(int x = 50; x < 350; x += 30)
         {
@@ -149,6 +184,15 @@ public class GameWorld extends World
             }
         }
         
+        /*
+        System.out.println("test");
+        int length = getObjectsAt(50, 25, null).size();
+        System.out.println(length);
+        for(int i = 0; i < length; i++)
+        {
+            System.out.println((getObjectsAt(50, 25, null).get(i)).toString());
+        }
+        */
         /*
         //the game will be played within this while loop
         while(game)
