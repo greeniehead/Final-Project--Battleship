@@ -94,9 +94,9 @@ public class GameWorld extends World
             }
         }
         
-        boolean dontPlaceOnTop = true;
-        while(dontPlaceOnTop)//should run and replace the ships until no ship is on one another
-        {
+        //boolean dontPlaceOnTop = true;
+        //while(dontPlaceOnTop)//should run and replace the ships until no ship is on one another
+        //{
             AICruiser AIcrui = new AICruiser();   
             addObject(AIcrui, AICruiser.placeCruiser()[0]*30, AICruiser.placeCruiser()[1]*30);
             if(AICruiser.placeCruiser()[3] > 5) AIcrui.setRotation(90);
@@ -238,7 +238,7 @@ public class GameWorld extends World
             }
             
             
-        }
+        //}
         
         //int count = 0;
         //int arrLength;
@@ -268,7 +268,6 @@ public class GameWorld extends World
         
         
         
-        /*
         for(int x = 50; x < 350; x += 30)
         {
             for(int y = 25; y < 325; y += 30)
@@ -277,7 +276,7 @@ public class GameWorld extends World
                 addObject(til2, x, y);
             }
         }
-        */
+        
         /*
         System.out.println("test");
         int length = getObjectsAt(50, 25, null).size();
