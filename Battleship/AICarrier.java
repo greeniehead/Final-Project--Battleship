@@ -132,4 +132,45 @@ public class AICarrier extends Actor
        return CarrierCoords;
        
         }
+    public static void stayInGrid(AICarrier carr)
+    {
+        if(carr.getRotation() == 0)
+            {
+                while(carr.getX() < 95)
+                {
+                    carr.setLocation(carr.getX()+1, carr.getY());
+                }
+                while(carr.getX() > 260)
+                {
+                    carr.setLocation(carr.getX()-1, carr.getY());
+                }
+                while(carr.getY() > 294)
+                {
+                    carr.setLocation(carr.getX(), carr.getY()-1);
+                }
+                while(carr.getY() < 10)
+                {
+                    carr.setLocation(carr.getX(), carr.getY()+1);
+                }
+            }
+            else
+            {
+                while(carr.getX() < 35)
+                {
+                    carr.setLocation(carr.getX()+1, carr.getY());
+                }
+                while(carr.getX() > 320)
+                {
+                    carr.setLocation(carr.getX()-1, carr.getY());
+                }
+                while(carr.getY() > 235)
+                {
+                    carr.setLocation(carr.getX(), carr.getY()-1);
+                }
+                while(carr.getY() < 70)
+                {
+                    carr.setLocation(carr.getX(), carr.getY()+1);
+                }
+            } 
+    }
 }

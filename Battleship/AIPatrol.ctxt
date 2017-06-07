@@ -3,4 +3,6 @@ comment0.params=
 comment0.target=void\ act()
 comment1.params=
 comment1.target=int[]\ placePatrol()
-numComments=2
+comment2.params=pat
+comment2.target=void\ stayInGrid(AIPatrol)
+numComments=3

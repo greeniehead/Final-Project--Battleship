@@ -66,7 +66,7 @@ public class AIBattle extends Actor
                 {
                     this.setLocation(this.getX()-1, this.getY());
                 }
-                while(this.getY() > 310)
+                while(this.getY() > 250)
                 {
                     this.setLocation(this.getX(), this.getY()-1);
                 }
@@ -147,4 +147,46 @@ public class AIBattle extends Actor
        return BattleCoords;
        
         }
+    
+    public static void stayInGrid(AIBattle batt)
+    {
+        if(batt.getRotation() == 0)
+            {
+                while(batt.getX() < 95)
+                {
+                    batt.setLocation(batt.getX()+1, batt.getY());
+                }
+                while(batt.getX() > 275)
+                {
+                    batt.setLocation(batt.getX()-1, batt.getY());
+                }
+                while(batt.getY() > 294)
+                {
+                    batt.setLocation(batt.getX(), batt.getY()-1);
+                }
+                while(batt.getY() < 10)
+                {
+                    batt.setLocation(batt.getX(), batt.getY()+1);
+                }
+            }
+            else
+            {
+                while(batt.getX() < 35)
+                {
+                    batt.setLocation(batt.getX()+1, batt.getY());
+                }
+                while(batt.getX() > 320)
+                {
+                    batt.setLocation(batt.getX()-1, batt.getY());
+                }
+                while(batt.getY() > 250)
+                {
+                    batt.setLocation(batt.getX(), batt.getY()-1);
+                }
+                while(batt.getY() < 50)
+                {
+                    batt.setLocation(batt.getX(), batt.getY()+1);
+                }
+            } 
+    }
 }
