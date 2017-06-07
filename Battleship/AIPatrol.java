@@ -80,7 +80,12 @@ public class AIPatrol extends Actor
           
         } */           
     }    
-    
+    public static void notOnTop(AIPatrol pat){
+        while(pat.getIntersectingObjects(null).size() > 4 ){
+          pat.setLocation(pat.getX()+(int)(Math.random()*10)-10, pat.getY()-(int)(Math.random()*10)-10);
+          
+        }  
+    }
     public static int[] placePatrol(){
        String[][] PatrolOnBoard = new String[10][10];
        for(int x = 0; x < 10; x++){                
@@ -147,4 +152,45 @@ public class AIPatrol extends Actor
        return PatrolCoords;
        
         }
+    public static void stayInGrid(AIPatrol pat)
+    {
+        if(pat.getRotation() == 0)
+            {
+                while(pat.getX() < 65)
+                {
+                    pat.setLocation(pat.getX()+1, pat.getY());
+                }
+                while(pat.getX() > 305)
+                {
+                    pat.setLocation(pat.getX()-1, pat.getY());
+                }
+                while(pat.getY() > 294)
+                {
+                    pat.setLocation(pat.getX(), pat.getY()-1);
+                }
+                while(pat.getY() < 10)
+                {
+                    pat.setLocation(pat.getX(), pat.getY()+1);
+                }
+            }
+            else
+            {
+                while(pat.getX() < 35)
+                {
+                    pat.setLocation(pat.getX()+1, pat.getY());
+                }
+                while(pat.getX() > 320)
+                {
+                    pat.setLocation(pat.getX()-1, pat.getY());
+                }
+                while(pat.getY() > 310)
+                {
+                    pat.setLocation(pat.getX(), pat.getY()-1);
+                }
+                while(pat.getY() < 50)
+                {
+                    pat.setLocation(pat.getX(), pat.getY()+1);
+                }
+            } 
+    }
 }

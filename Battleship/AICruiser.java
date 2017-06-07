@@ -135,4 +135,45 @@ public class AICruiser extends Actor
        return CruiserCoords;
        
         }
+    public static void stayInGrid(AICruiser crui)
+    {
+        if(crui.getRotation() == 0)
+            {
+                while(crui.getX() < 65)
+                {
+                    crui.setLocation(crui.getX()+1, crui.getY());
+                }
+                while(crui.getX() > 290)
+                {
+                    crui.setLocation(crui.getX()-1, crui.getY());
+                }
+                while(crui.getY() > 294)
+                {
+                    crui.setLocation(crui.getX(), crui.getY()-1);
+                }
+                while(crui.getY() < 10)
+                {
+                    crui.setLocation(crui.getX(), crui.getY()+1);
+                }
+            }
+            else
+            {
+                while(crui.getX() < 35)
+                {
+                    crui.setLocation(crui.getX()+1, crui.getY());
+                }
+                while(crui.getX() > 320)
+                {
+                    crui.setLocation(crui.getX()-1, crui.getY());
+                }
+                while(crui.getY() > 265)
+                {
+                    crui.setLocation(crui.getX(), crui.getY()-1);
+                }
+                while(crui.getY() < 50)
+                {
+                    crui.setLocation(crui.getX(), crui.getY()+1);
+                }
+            } 
+    }
 }

@@ -65,7 +65,12 @@ public class AICarrier extends Actor
           
         } */           
     }    
-    
+    public static void notOnTop(AICarrier carr){
+        while(carr.getIntersectingObjects(null).size() > 10 ){
+          carr.setLocation(carr.getX()+(int)(Math.random()*10)-10, carr.getY()-(int)(Math.random()*10)-10);
+          
+        }  
+    }
     public static int[] placeCarrier(){
        String[][] CarrierOnBoard = new String[10][10];
        for(int x = 0; x < 10; x++){                
@@ -132,4 +137,45 @@ public class AICarrier extends Actor
        return CarrierCoords;
        
         }
+    public static void stayInGrid(AICarrier carr)
+    {
+        if(carr.getRotation() == 0)
+            {
+                while(carr.getX() < 95)
+                {
+                    carr.setLocation(carr.getX()+1, carr.getY());
+                }
+                while(carr.getX() > 260)
+                {
+                    carr.setLocation(carr.getX()-1, carr.getY());
+                }
+                while(carr.getY() > 294)
+                {
+                    carr.setLocation(carr.getX(), carr.getY()-1);
+                }
+                while(carr.getY() < 10)
+                {
+                    carr.setLocation(carr.getX(), carr.getY()+1);
+                }
+            }
+            else
+            {
+                while(carr.getX() < 35)
+                {
+                    carr.setLocation(carr.getX()+1, carr.getY());
+                }
+                while(carr.getX() > 320)
+                {
+                    carr.setLocation(carr.getX()-1, carr.getY());
+                }
+                while(carr.getY() > 235)
+                {
+                    carr.setLocation(carr.getX(), carr.getY()-1);
+                }
+                while(carr.getY() < 70)
+                {
+                    carr.setLocation(carr.getX(), carr.getY()+1);
+                }
+            } 
+    }
 }

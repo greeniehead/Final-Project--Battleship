@@ -65,7 +65,12 @@ public class AISub extends Actor
           
         } */  
     }    
-    
+    public static void notOnTop(AISub sub ){
+        while(sub.getIntersectingObjects(null).size() > 6 ){
+          sub.setLocation(sub.getX()+(int)(Math.random()*10)-10, sub.getY()-(int)(Math.random()*10)-10);
+          
+        }  
+    }
     public static int[] placeSub(){
        String[][] SubOnBoard = new String[10][10];
        for(int x = 0; x < 10; x++){                
@@ -132,4 +137,46 @@ public class AISub extends Actor
        return SubCoords;
        
         }
+    
+    public static void stayInGrid(AISub sub)
+    {
+        if(sub.getRotation() == 0)
+            {
+                while(sub.getX() < 65)
+                {
+                    sub.setLocation(sub.getX()+1, sub.getY());
+                }
+                while(sub.getX() > 290)
+                {
+                    sub.setLocation(sub.getX()-1, sub.getY());
+                }
+                while(sub.getY() > 294)
+                {
+                    sub.setLocation(sub.getX(), sub.getY()-1);
+                }
+                while(sub.getY() < 10)
+                {
+                    sub.setLocation(sub.getX(), sub.getY()+1);
+                }
+            }
+            else
+            {
+                while(sub.getX() < 35)
+                {
+                    sub.setLocation(sub.getX()+1, sub.getY());
+                }
+                while(sub.getX() > 320)
+                {
+                    sub.setLocation(sub.getX()-1, sub.getY());
+                }
+                while(sub.getY() > 265)
+                {
+                    sub.setLocation(sub.getX(), sub.getY()-1);
+                }
+                while(sub.getY() < 50)
+                {
+                    sub.setLocation(sub.getX(), sub.getY()+1);
+                }
+            } 
+    }
 }

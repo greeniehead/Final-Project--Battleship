@@ -16,5 +16,31 @@ public class Hit extends Actor
     {
         GreenfootImage hittt = new GreenfootImage("redtile.fw.png");
         setImage(hittt);
+
+        while((this.getX()-80)%30 != 0)
+        {
+            this.setLocation(this.getX() + 1, this.getY());
+        }        
+        while((this.getY()-505)%30 != 0)
+        {
+            this.setLocation(this.getX(), this.getY() + 1);
+        }
+        
+        while(this.getX() < 35)
+        {
+            this.setLocation(this.getX()+1, this.getY());
+        }
+        while(this.getX() > 320)
+        {
+            this.setLocation(this.getX()-1, this.getY());
+        }
+        while(this.getY() > 295)
+        {
+            this.setLocation(this.getX(), this.getY()-1);
+        }
+        while(this.getY() < 10)
+        {
+            this.setLocation(this.getX(), this.getY()+1);
+        }
     }    
 }
