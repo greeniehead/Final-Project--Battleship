@@ -1,5 +1,9 @@
 #Greenfoot properties
+<<<<<<< HEAD
 #Wed Jun 07 10:24:10 PDT 2017
+=======
+#Thu Jun 01 11:20:19 PDT 2017
+>>>>>>> origin/master
 target16.name=Coord
 target26.width=80
 target2.name=Message
@@ -78,7 +82,7 @@ target13.type=ClassTarget
 target25.naviview.expanded=true
 dependency24.type=UsesDependency
 dependency21.from=GameWorld
-dependency28.from=Fire
+dependency28.from=GameWorld
 target12.naviview.expanded=true
 dependency9.to=Patrol
 target6.type=ClassTarget
@@ -98,11 +102,11 @@ target3.x=160
 >>>>>>>=parent of 7a62c7c... ships don't place on top of each other
 target8.height=50
 target25.showInterface=false
-dependency26.to=Hit
+dependency26.to=GameWorld
 target16.editor.width=900
-mainWindow.y=-8
+mainWindow.y=0
 class.LossScreen.superclass=greenfoot.World
-mainWindow.x=-8
+mainWindow.x=797
 class.AIPatrol.superclass=greenfoot.Actor
 target3.showInterface=false
 target12.showInterface=false
@@ -113,10 +117,17 @@ dependency7.type=UsesDependency
 dependency4.from=End
 class.CompBoard.image=board.jpg
 target26.y=550
+<<<<<<< HEAD
 target5.editor.y=-8
 target26.x=10
 target5.editor.x=-8
 target5.editor.height=1056
+=======
+target5.editor.y=37
+target26.x=10
+target5.editor.x=941
+target5.editor.height=700
+>>>>>>> origin/master
 dependency20.to=AISub
 target22.y=490
 target22.x=190
@@ -154,7 +165,7 @@ dependency20.from=GameWorld
 target19.type=ClassTarget
 target4.width=80
 target9.showInterface=false
-dependency27.from=Tile
+dependency27.from=GameWorld
 target18.showInterface=false
 target10.showInterface=false
 target1.showInterface=false
@@ -176,10 +187,14 @@ target11.y=310
 target3.editor.height=700
 target11.x=190
 target12.editor.height=700
+<<<<<<< HEAD
 target5.editor.width=1936
+=======
+target5.editor.width=900
+>>>>>>> origin/master
 target8.showInterface=false
 target17.showInterface=false
-dependency27.to=GameWorld
+dependency27.to=AISub
 dependency3.from=End
 dependency6.type=UsesDependency
 target13.editor.width=900
@@ -231,7 +246,7 @@ target18.type=ClassTarget
 target16.editor.x=0
 target17.height=50
 dependency29.type=UsesDependency
-dependency26.from=GameWorld
+dependency26.from=Tile
 class.Submarine.superclass=greenfoot.Actor
 class.UserBoard.image=board.jpg
 target4.type=ClassTarget
@@ -254,7 +269,7 @@ dependency2.from=MainMenu
 target17.width=80
 dependency9.from=GameWorld
 target10.height=50
-dependency28.to=GameWorld
+dependency28.to=AIBattle
 target13.naviview.expanded=true
 target2.editor.width=900
 target13.width=80
@@ -280,7 +295,11 @@ target14.x=100
 target10.type=ClassTarget
 dependency18.to=Miss
 dependency21.type=UsesDependency
+<<<<<<< HEAD
 package.numDependencies=28
+=======
+package.numDependencies=25
+>>>>>>> origin/master
 target17.type=ClassTarget
 dependency28.type=UsesDependency
 dependency25.from=GameWorld
@@ -371,7 +390,7 @@ dependency7.from=Restart
 target6.width=80
 target20.width=80
 target6.editor.y=20
-mainWindow.height=1056
+mainWindow.height=1080
 target9.naviview.expanded=true
 target6.editor.x=40
 class.End.superclass=greenfoot.Actor
@@ -454,5 +473,5 @@ class.Battle.superclass=greenfoot.Actor
 target19.showInterface=false
 class.Patrol.superclass=greenfoot.Actor
 target1.height=50
-mainWindow.width=1936
+mainWindow.width=885
 =\=\=\=\=\=\=
