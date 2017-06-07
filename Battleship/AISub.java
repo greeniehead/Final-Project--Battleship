@@ -65,7 +65,12 @@ public class AISub extends Actor
           
         } */  
     }    
-    
+    public static void notOnTop(AISub sub ){
+        while(sub.getIntersectingObjects(null).size() > 6 ){
+          sub.setLocation(sub.getX()+(int)(Math.random()*10)-10, sub.getY()-(int)(Math.random()*10)-10);
+          
+        }  
+    }
     public static int[] placeSub(){
        String[][] SubOnBoard = new String[10][10];
        for(int x = 0; x < 10; x++){                

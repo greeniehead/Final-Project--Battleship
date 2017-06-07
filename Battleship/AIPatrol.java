@@ -80,7 +80,12 @@ public class AIPatrol extends Actor
           
         } */           
     }    
-    
+    public static void notOnTop(AIPatrol pat){
+        while(pat.getIntersectingObjects(null).size() > 4 ){
+          pat.setLocation(pat.getX()+(int)(Math.random()*10)-10, pat.getY()-(int)(Math.random()*10)-10);
+          
+        }  
+    }
     public static int[] placePatrol(){
        String[][] PatrolOnBoard = new String[10][10];
        for(int x = 0; x < 10; x++){                

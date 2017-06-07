@@ -1,5 +1,9 @@
 #Greenfoot properties
+<<<<<<< HEAD
 #Wed Jun 07 09:34:03 PDT 2017
+=======
+#Wed Jun 07 10:00:07 PDT 2017
+>>>>>>> origin/master
 target16.name=Coord
 target26.width=80
 target2.name=Message
@@ -25,7 +29,11 @@ simulation.speed=50
 dependency25.type=UsesDependency
 dependency22.from=GameWorld
 target15.width=80
+<<<<<<< HEAD
 dependency29.from=GameWorld
+=======
+dependency29.from=AIPatrol
+>>>>>>> origin/master
 target15.height=50
 target7.type=ClassTarget
 target11.width=90
@@ -113,10 +121,17 @@ dependency7.type=UsesDependency
 dependency4.from=End
 class.CompBoard.image=board.jpg
 target26.y=550
+<<<<<<< HEAD
 target5.editor.y=-8
 target26.x=10
 target5.editor.x=-8
 target5.editor.height=1056
+=======
+target5.editor.y=159
+target26.x=10
+target5.editor.x=1117
+target5.editor.height=700
+>>>>>>> origin/master
 dependency20.to=AISub
 target22.y=490
 target22.x=190
@@ -131,8 +146,13 @@ target7.name=AISub
 dependency16.to=WIN
 target16.naviview.expanded=true
 class.Start.superclass=greenfoot.Actor
+<<<<<<< HEAD
 target1.editor.y=0
 target1.editor.x=0
+=======
+target1.editor.y=206
+target1.editor.x=621
+>>>>>>> origin/master
 target21.name=AICruiser
 target18.editor.y=49
 target18.editor.x=831
@@ -176,16 +196,26 @@ target11.y=310
 target3.editor.height=700
 target11.x=190
 target12.editor.height=700
+<<<<<<< HEAD
 target5.editor.width=1936
+=======
+target5.editor.width=954
+>>>>>>> origin/master
 target8.showInterface=false
 target17.showInterface=false
 dependency27.to=GameWorld
 dependency3.from=End
 dependency6.type=UsesDependency
 target13.editor.width=900
+<<<<<<< HEAD
 target7.editor.y=73
 dependency4.to=MainMenu
 target7.editor.x=683
+=======
+target7.editor.y=236
+dependency4.to=MainMenu
+target7.editor.x=917
+>>>>>>> origin/master
 class.Tile.image=onetile.png
 target25.width=80
 class.Quit.superclass=greenfoot.Actor
@@ -280,7 +310,11 @@ target14.x=100
 target10.type=ClassTarget
 dependency18.to=Miss
 dependency21.type=UsesDependency
+<<<<<<< HEAD
 package.numDependencies=28
+=======
+package.numDependencies=29
+>>>>>>> origin/master
 target17.type=ClassTarget
 dependency28.type=UsesDependency
 dependency25.from=GameWorld
@@ -313,7 +347,11 @@ target9.y=250
 target4.editor.y=20
 target9.x=190
 target4.editor.x=40
+<<<<<<< HEAD
 dependency29.to=AICarrier
+=======
+dependency29.to=AISub
+>>>>>>> origin/master
 target11.name=WinScreen
 target5.y=70
 target5.x=70
@@ -413,10 +451,17 @@ target15.type=ClassTarget
 dependency23.from=GameWorld
 dependency26.type=UsesDependency
 target11.height=50
+<<<<<<< HEAD
 target15.editor.y=0
 dependency24.to=Coord
 target1.type=ClassTarget
 target15.editor.x=0
+=======
+target15.editor.y=57
+dependency24.to=Coord
+target1.type=ClassTarget
+target15.editor.x=1033
+>>>>>>> origin/master
 target9.width=90
 target8.type=ClassTarget
 target23.width=80

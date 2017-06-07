@@ -75,12 +75,14 @@ public class AIBattle extends Actor
                     this.setLocation(this.getX(), this.getY()+1);
                 }
             }  
-      /*while(this.getIntersectingObjects(null).size() > 4 ){
-          this.setLocation(this.getX()+(int)(Math.random()*10)-10, this.getY()-(int)(Math.random()*10)-10);
-          
-        }  */
+      
     }    
-    
+    public static void notOnTop(AIBattle bat){
+        while(bat.getIntersectingObjects(null).size() > 8 ){
+          bat.setLocation(bat.getX()+(int)(Math.random()*10)-10, bat.getY()-(int)(Math.random()*10)-10);
+          
+        }  
+    }
     public static int[] placeBattle(){
        String[][] BattleOnBoard = new String[10][10];
        for(int x = 0; x < 10; x++){                

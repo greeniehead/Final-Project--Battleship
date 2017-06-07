@@ -1,8 +1,15 @@
 #BlueJ class context
 comment0.params=
 comment0.target=void\ act()
+<<<<<<< HEAD
 comment1.params=
 comment1.target=int[]\ placeBattle()
 comment2.params=batt
 comment2.target=void\ stayInGrid(AIBattle)
+=======
+comment1.params=bat
+comment1.target=void\ notOnTop(AIBattle)
+comment2.params=
+comment2.target=int[]\ placeBattle()
+>>>>>>> origin/master
 numComments=3
