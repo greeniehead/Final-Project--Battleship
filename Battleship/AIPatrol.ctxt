@@ -1,6 +1,8 @@
 #BlueJ class context
 comment0.params=
 comment0.target=void\ act()
-comment1.params=
-comment1.target=int[]\ placePatrol()
-numComments=2
+comment1.params=pat
+comment1.target=void\ notOnTop(AIPatrol)
+comment2.params=
+comment2.target=int[]\ placePatrol()
+numComments=3

@@ -65,7 +65,12 @@ public class AICarrier extends Actor
           
         } */           
     }    
-    
+    public static void notOnTop(AICarrier carr){
+        while(carr.getIntersectingObjects(null).size() > 10 ){
+          carr.setLocation(carr.getX()+(int)(Math.random()*10)-10, carr.getY()-(int)(Math.random()*10)-10);
+          
+        }  
+    }
     public static int[] placeCarrier(){
        String[][] CarrierOnBoard = new String[10][10];
        for(int x = 0; x < 10; x++){                
