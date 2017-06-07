@@ -1,15 +1,10 @@
 #BlueJ class context
 comment0.params=
 comment0.target=void\ act()
-<<<<<<< HEAD
-comment1.params=
-comment1.target=int[]\ placeCarrier()
-comment2.params=carr
-comment2.target=void\ stayInGrid(AICarrier)
-=======
 comment1.params=carr
 comment1.target=void\ notOnTop(AICarrier)
 comment2.params=
 comment2.target=int[]\ placeCarrier()
->>>>>>> origin/master
-numComments=3
+comment3.params=carr
+comment3.target=void\ stayInGrid(AICarrier)
+numComments=4
