@@ -28,7 +28,7 @@ public class Tile extends Actor
     
     public void removeSelf()
     {
-        //GameWorld.setFiring(false);
+        GameWorld.setFiring(false);
         getWorld().removeObject(this);
     }
     
