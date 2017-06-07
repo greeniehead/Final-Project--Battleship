@@ -1,5 +1,9 @@
 #Greenfoot properties
+<<<<<<< HEAD
 #Wed Jun 07 10:46:25 PDT 2017
+=======
+#Wed Jun 07 10:36:39 PDT 2017
+>>>>>>> origin/master
 target16.name=Coord
 target26.width=80
 target2.name=Message
@@ -80,7 +84,7 @@ target13.type=ClassTarget
 target25.naviview.expanded=true
 dependency24.type=UsesDependency
 dependency21.from=GameWorld
-dependency28.from=GameWorld
+dependency28.from=Fire
 target12.naviview.expanded=true
 dependency9.to=Patrol
 target6.type=ClassTarget
@@ -99,12 +103,16 @@ class.WIN.superclass=greenfoot.Actor
 target3.x=160
 >>>>>>>=origin/master
 target25.showInterface=false
+<<<<<<< HEAD
 dependency26.to=GameWorld
 target8.height=50
+=======
+dependency26.to=Hit
+>>>>>>> origin/master
 target16.editor.width=900
-mainWindow.y=0
+mainWindow.y=-8
 class.LossScreen.superclass=greenfoot.World
-mainWindow.x=797
+mainWindow.x=-8
 class.AIPatrol.superclass=greenfoot.Actor
 target12.showInterface=false
 target3.showInterface=false
@@ -115,9 +123,16 @@ dependency7.type=UsesDependency
 dependency4.from=End
 class.CompBoard.image=board.jpg
 target26.y=550
+<<<<<<< HEAD
 target26.x=10
 target5.editor.y=37
 target5.editor.x=941
+=======
+target5.editor.y=-8
+target26.x=10
+target5.editor.x=-8
+target5.editor.height=1056
+>>>>>>> origin/master
 dependency20.to=AISub
 target5.editor.height=700
 target22.y=490
@@ -156,7 +171,12 @@ dependency23.type=UsesDependency
 dependency20.from=GameWorld
 target19.type=ClassTarget
 target4.width=80
+<<<<<<< HEAD
 dependency27.from=GameWorld
+=======
+target9.showInterface=false
+dependency27.from=Tile
+>>>>>>> origin/master
 target18.showInterface=false
 target9.showInterface=false
 target10.showInterface=false
@@ -179,10 +199,17 @@ target11.y=310
 target3.editor.height=700
 target11.x=190
 target12.editor.height=700
+<<<<<<< HEAD
 target5.editor.width=900
 target17.showInterface=false
 target8.showInterface=false
 dependency27.to=AISub
+=======
+target5.editor.width=1936
+target8.showInterface=false
+target17.showInterface=false
+dependency27.to=GameWorld
+>>>>>>> origin/master
 dependency3.from=End
 dependency6.type=UsesDependency
 target13.editor.width=900
@@ -234,7 +261,7 @@ target18.type=ClassTarget
 target16.editor.x=0
 target17.height=50
 dependency29.type=UsesDependency
-dependency26.from=Tile
+dependency26.from=GameWorld
 class.Submarine.superclass=greenfoot.Actor
 class.UserBoard.image=board.jpg
 target4.type=ClassTarget
@@ -257,7 +284,7 @@ dependency2.from=MainMenu
 target17.width=80
 dependency9.from=GameWorld
 target10.height=50
-dependency28.to=AIBattle
+dependency28.to=GameWorld
 target13.naviview.expanded=true
 target2.editor.width=900
 target13.width=80
@@ -283,7 +310,11 @@ target14.x=100
 target10.type=ClassTarget
 dependency18.to=Miss
 dependency21.type=UsesDependency
+<<<<<<< HEAD
 package.numDependencies=25
+=======
+package.numDependencies=28
+>>>>>>> origin/master
 target17.type=ClassTarget
 dependency28.type=UsesDependency
 dependency25.from=GameWorld
@@ -375,8 +406,14 @@ target8.editor.height=700
 dependency7.from=Restart
 target6.width=80
 target20.width=80
+<<<<<<< HEAD
 mainWindow.height=1080
 target6.editor.y=20
+=======
+target6.editor.y=20
+mainWindow.height=1056
+target9.naviview.expanded=true
+>>>>>>> origin/master
 target6.editor.x=40
 target9.naviview.expanded=true
 class.End.superclass=greenfoot.Actor
@@ -459,5 +496,5 @@ class.Battle.superclass=greenfoot.Actor
 target19.showInterface=false
 class.Patrol.superclass=greenfoot.Actor
 target1.height=50
-mainWindow.width=885
+mainWindow.width=1936
 =\=\=\=\=\=\=

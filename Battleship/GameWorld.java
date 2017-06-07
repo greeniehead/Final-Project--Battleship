@@ -96,6 +96,42 @@ public class GameWorld extends World
         addObject(AIcrui, AICruiser.placeCruiser()[0]*30, AICruiser.placeCruiser()[1]*30);
         if(AICruiser.placeCruiser()[3] > 5) AIcrui.setRotation(90);
         AIcrui.stayInGrid(AIcrui);
+        
+        
+        AISub AIsub = new AISub();   
+        addObject(AIsub, AISub.placeSub()[0]*30, AISub.placeSub()[1]*30);
+        if(AISub.placeSub()[3] > 5) AIsub.setRotation(90);
+        AIsub.stayInGrid(AIsub);
+        AIsub.notOnTop(AIsub);
+        
+        
+        
+        AIPatrol AIpat = new AIPatrol();
+        addObject(AIpat, AIPatrol.placePatrol()[0]*30, AIPatrol.placePatrol()[1]*30);
+        if(AIPatrol.placePatrol()[3] > 5) AIpat.setRotation(90);
+        AIpat.stayInGrid(AIpat);
+        AIpat.notOnTop(AIpat);
+        
+        
+        
+        AIBattle AIbat = new AIBattle();
+        addObject(AIbat, AIBattle.placeBattle()[0]*30, AIBattle.placeBattle()[1]*30);
+        if(AIBattle.placeBattle()[3] > 5) AIbat.setRotation(90);
+        AIbat.stayInGrid(AIbat);
+        AIbat.notOnTop(AIbat);
+        
+        
+        
+        AICarrier AIcarr = new AICarrier();
+        addObject(AIcarr, AICarrier.placeCarrier()[0]*30, AICarrier.placeCarrier()[1]*30);
+        if(AICarrier.placeCarrier()[3] > 5) AIcarr.setRotation(90);
+        AIcarr.stayInGrid(AIcarr);
+        AIcarr.notOnTop(AIcarr);
+        
+        
+        
+        
+        
         if(AIcrui.getRotation() == 0)
         {
             Hit hitt = new Hit();
@@ -115,10 +151,6 @@ public class GameWorld extends World
             addObject(hitttt, AIcrui.getX(), AIcrui.getY() +30);
         }
         
-        AISub AIsub = new AISub();   
-        addObject(AIsub, AISub.placeSub()[0]*30, AISub.placeSub()[1]*30);
-        if(AISub.placeSub()[3] > 5) AIsub.setRotation(90);
-        AIsub.stayInGrid(AIsub);
         if(AIsub.getRotation() == 0)
         {
             Hit hitt = new Hit();
@@ -138,11 +170,6 @@ public class GameWorld extends World
             addObject(hitttt, AIsub.getX(), AIsub.getY() +30);
         }
         
-        
-        AIPatrol AIpat = new AIPatrol();
-        addObject(AIpat, AIPatrol.placePatrol()[0]*30, AIPatrol.placePatrol()[1]*30);
-        if(AIPatrol.placePatrol()[3] > 5) AIpat.setRotation(90);
-        AIpat.stayInGrid(AIpat);
         if(AIpat.getRotation() == 0)
         {
             Hit hittt = new Hit();
@@ -152,19 +179,12 @@ public class GameWorld extends World
         }
         else
         {
-            Hit hitt = new Hit();
-            addObject(hitt, AIpat.getX(), AIpat.getY());
             Hit hittt = new Hit();
             addObject(hittt, AIpat.getX(), AIpat.getY() -15);
             Hit hitttt = new Hit();
             addObject(hitttt, AIpat.getX(), AIpat.getY() +15);
         }
         
-        
-        AIBattle AIbat = new AIBattle();
-        addObject(AIbat, AIBattle.placeBattle()[0]*30, AIBattle.placeBattle()[1]*30);
-        if(AIBattle.placeBattle()[3] > 5) AIbat.setRotation(90);
-        AIbat.stayInGrid(AIbat);
         if(AIbat.getRotation() == 0)
         {
             Hit hitt = new Hit();
@@ -188,11 +208,6 @@ public class GameWorld extends World
             addObject(hittttt, AIbat.getX(), AIbat.getY() -45);
         }
         
-        
-        AICarrier AIcarr = new AICarrier();
-        addObject(AIcarr, AICarrier.placeCarrier()[0]*30, AICarrier.placeCarrier()[1]*30);
-        if(AICarrier.placeCarrier()[3] > 5) AIcarr.setRotation(90);
-        AIcarr.stayInGrid(AIcarr);
         if(AIcarr.getRotation() == 0)
         {
             Hit hitt = new Hit();
@@ -219,9 +234,6 @@ public class GameWorld extends World
             Hit hitttttt = new Hit();
             addObject(hitttttt, AIcarr.getX(), AIcarr.getY() +60);
         }
-        
-        
-        
         /*
         for(int x = 50; x < 350; x += 30)
         {

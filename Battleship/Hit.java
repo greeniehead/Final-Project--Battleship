@@ -42,5 +42,7 @@ public class Hit extends Actor
         {
             this.setLocation(this.getX(), this.getY()+1);
         }
+        
+        hittt.setTransparency(100);
     }    
 }
