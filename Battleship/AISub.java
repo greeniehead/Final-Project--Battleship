@@ -1,4 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.awt.Color;
 
 /**
  * Write a description of class AICarrier here.
@@ -8,21 +9,24 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class AISub extends Actor
 {
-   
     public void act() 
     {
-      GreenfootImage AISub;
-      AISub = new GreenfootImage("sub2.fw.png");
-      setImage(AISub);       
-      while((this.getX()-80)%30 != 0)
+        GreenfootImage AISub;
+        AISub = new GreenfootImage("sub2.fw.png");
+        setImage(AISub);
+        
+        AISub.setColor(Color.green);
+        AISub.fill();
+        
+        while((this.getX()-80)%30 != 0)
         {
             this.setLocation(this.getX() + 1, this.getY());
         }        
-      while((this.getY()-505)%30 != 0)
+        while((this.getY()-505)%30 != 0)
         {
             this.setLocation(this.getX(), this.getY() + 1);
         }        
-      if(this.getRotation() == 0)
+        if(this.getRotation() == 0)
             {
                 while(this.getX() < 65)
                 {
@@ -60,12 +64,18 @@ public class AISub extends Actor
                     this.setLocation(this.getX(), this.getY()+1);
                 }
             }  
-      /*while(this.getIntersectingObjects(null).size() > 3 ){
+            /*while(this.getIntersectingObjects(null).size() > 3 ){
           this.setLocation(this.getX()+(int)(Math.random()*10)-10, this.getY()-(int)(Math.random()*10)-10);
           
         } */  
     }    
     public static void notOnTop(AISub sub ){
+        System.out.println("sub");
+        for(Object element : sub.getIntersectingObjects(null))
+        {
+            System.out.println(element.toString());
+        }
+        
         while(sub.getIntersectingObjects(null).size() > 6 ){
           sub.setLocation(sub.getX()+(int)(Math.random()*10)-10, sub.getY()-(int)(Math.random()*10)-10);
           

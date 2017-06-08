@@ -66,6 +66,11 @@ public class AICarrier extends Actor
         } */           
     }    
     public static void notOnTop(AICarrier carr){
+        System.out.println("carrier");
+        for(Object element : carr.getIntersectingObjects(null))
+        {
+            System.out.println(element.toString());
+        }
         while(carr.getIntersectingObjects(null).size() > 10 ){
           carr.setLocation(carr.getX()+(int)(Math.random()*10)-10, carr.getY()-(int)(Math.random()*10)-10);
           
