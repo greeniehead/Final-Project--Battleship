@@ -81,9 +81,7 @@ public class GameWorld extends World
         addObject(carr, 110, 525);
         
         Message place = new Message("Please place your ships");
-        addObject(place, 475, 200);
-        
-        
+        addObject(place, 475, 50);
         
         String[][] AIBoardArray = new String[10][10];
         for(int x = 0; x < 10; x++)
@@ -246,13 +244,27 @@ public class GameWorld extends World
             }
         }
         */
+         RestartLabel label = new RestartLabel("View Loss Screen");
+        addObject(label, 425, 325);
         
+        StartLabel label1 = new StartLabel("View Win Screen");
+        addObject(label1, 425, 400);
         
-        Coord cord = new Coord("temp");
-        addObject(cord, 500, 300);
+        LoseLabel label2 = new LoseLabel("Reset");
+        addObject(label2, 480, 475);
+        
+        EndLabel label3 = new EndLabel("Exit to Main Menu");
+        addObject(label3, 425, 550);
+        
+        FireLabel label4 = new FireLabel("Fire");
+        addObject(label4, 500, 200);
+        
+          Coord cord = new Coord("temp");
+        addObject(cord, 475, 100);
         
         Fire fireee = new Fire();
-        addObject(fireee, 375, 150);
+        addObject(fireee, 550, 200);
+
     }
     
     public void computer()//computer decision code goes here
