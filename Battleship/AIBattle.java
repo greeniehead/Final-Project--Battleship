@@ -78,6 +78,11 @@ public class AIBattle extends Actor
       
     }    
     public static void notOnTop(AIBattle bat){
+        System.out.println("battleship");
+        for(Object element : bat.getIntersectingObjects(null))
+        {
+            System.out.println(element.toString());
+        }
         while(bat.getIntersectingObjects(null).size() > 8 ){
           bat.setLocation(bat.getX()+(int)(Math.random()*10)-10, bat.getY()-(int)(Math.random()*10)-10);
           
