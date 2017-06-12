@@ -134,7 +134,22 @@ public class AICruiser extends Actor
        CruiserCoords[3] = UpDownOrLeftRight;
        return CruiserCoords;
        
-        }
+    }
+    
+    public static void notOnTop(AICruiser crui)
+    {
+        
+        
+        /*
+        System.out.println("Cruiser");
+        
+        System.out.println("sub: "+crui.isTouching(AISub.class));
+        System.out.println("patrol: "+crui.isTouching(AIPatrol.class));
+        System.out.println("carrier: "+crui.isTouching(AICarrier.class));
+        System.out.println("battle: "+crui.isTouching(AIBattle.class));
+        */
+    }
+    
     public static void stayInGrid(AICruiser crui)
     {
         if(crui.getRotation() == 0)

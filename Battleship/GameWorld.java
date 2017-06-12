@@ -102,7 +102,7 @@ public class GameWorld extends World
         addObject(AIsub, AISub.placeSub()[0]*30, AISub.placeSub()[1]*30);
         if(AISub.placeSub()[3] > 5) AIsub.setRotation(90);
         AIsub.stayInGrid(AIsub);
-        AIsub.notOnTop(AIsub);
+        //AIsub.notOnTop(AIsub);
         
         
         
@@ -110,7 +110,7 @@ public class GameWorld extends World
         addObject(AIpat, AIPatrol.placePatrol()[0]*30, AIPatrol.placePatrol()[1]*30);
         if(AIPatrol.placePatrol()[3] > 5) AIpat.setRotation(90);
         AIpat.stayInGrid(AIpat);
-        AIpat.notOnTop(AIpat);
+        //AIpat.notOnTop(AIpat);
         
         
         
@@ -118,7 +118,7 @@ public class GameWorld extends World
         addObject(AIbat, AIBattle.placeBattle()[0]*30, AIBattle.placeBattle()[1]*30);
         if(AIBattle.placeBattle()[3] > 5) AIbat.setRotation(90);
         AIbat.stayInGrid(AIbat);
-        AIbat.notOnTop(AIbat);
+        //AIbat.notOnTop(AIbat);
         
         
         
@@ -126,10 +126,7 @@ public class GameWorld extends World
         addObject(AIcarr, AICarrier.placeCarrier()[0]*30, AICarrier.placeCarrier()[1]*30);
         if(AICarrier.placeCarrier()[3] > 5) AIcarr.setRotation(90);
         AIcarr.stayInGrid(AIcarr);
-        AIcarr.notOnTop(AIcarr);
-        
-        
-        
+        //AIcarr.notOnTop(AIcarr);
         
         
         if(AIcrui.getRotation() == 0)

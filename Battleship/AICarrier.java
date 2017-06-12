@@ -8,65 +8,91 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class AICarrier extends Actor
 {
-   
+    private String[] c1 = new String[2];
+    private String[] c2 = new String[2];
+    private String[] c3 = new String[2];
+    private String[] c4 = new String[2];
+    private String[] c5 = new String[2];
+    private String[][] coords = {c1, c2, c3, c4, c5};
+    
     public void act() 
     {
-      GreenfootImage AICarr;
-      AICarr = new GreenfootImage("carrier2.fw.png");
-      setImage(AICarr);       
-      while((this.getX()-80)%30 != 0)
+        GreenfootImage AICarr;
+        AICarr = new GreenfootImage("carrier2.fw.png");
+        setImage(AICarr);       
+        while((this.getX()-80)%30 != 0)
         {
             this.setLocation(this.getX() + 1, this.getY());
         }        
-      while((this.getY()-505)%30 != 0)
+        while((this.getY()-505)%30 != 0)
         {
             this.setLocation(this.getX(), this.getY() + 1);
         }        
-      if(this.getRotation() == 0)
+        if(this.getRotation() == 0)
+        {
+            while(this.getX() < 95)
             {
-                while(this.getX() < 95)
-                {
-                    this.setLocation(this.getX()+1, this.getY());
-                }
-                while(this.getX() > 260)
-                {
-                    this.setLocation(this.getX()-1, this.getY());
-                }
-                while(this.getY() > 294)
-                {
-                    this.setLocation(this.getX(), this.getY()-1);
-                }
-                while(this.getY() < 10)
-                {
-                    this.setLocation(this.getX(), this.getY()+1);
-                }
+                this.setLocation(this.getX()+1, this.getY());
             }
-            else
+            while(this.getX() > 260)
             {
-                while(this.getX() < 35)
-                {
-                    this.setLocation(this.getX()+1, this.getY());
-                }
-                while(this.getX() > 320)
-                {
-                    this.setLocation(this.getX()-1, this.getY());
-                }
-                while(this.getY() > 235)
-                {
-                    this.setLocation(this.getX(), this.getY()-1);
-                }
-                while(this.getY() < 70)
-                {
-                    this.setLocation(this.getX(), this.getY()+1);
-                }
-            }  
-      /* while(this.getIntersectingObjects(null).size() > 5 ){
+                this.setLocation(this.getX()-1, this.getY());
+            }
+            while(this.getY() > 294)
+            {
+                this.setLocation(this.getX(), this.getY()-1);
+            }
+            while(this.getY() < 10)
+            {
+                this.setLocation(this.getX(), this.getY()+1);
+            }
+        }
+        else
+        {
+            while(this.getX() < 35)
+            {
+                this.setLocation(this.getX()+1, this.getY());
+            }
+            while(this.getX() > 320)
+            {
+                this.setLocation(this.getX()-1, this.getY());
+            }
+            while(this.getY() > 235)
+            {
+                this.setLocation(this.getX(), this.getY()-1);
+            }
+            while(this.getY() < 70)
+            {
+                this.setLocation(this.getX(), this.getY()+1);
+            }
+        }
+        this.stayInGrid(this);
+        this.setCoords(this);
+        for(String[] arrElement : coords)
+        {
+            for(String element : arrElement)
+            {
+                System.out.print(element);
+            }
+            System.out.println();
+        }
+        
+        /* while(this.getIntersectingObjects(null).size() > 5 ){
           this.setLocation(this.getX()+(int)(Math.random()*10)-10, this.getY()-(int)(Math.random()*10)-10);
           
         } */           
     }    
     public static void notOnTop(AICarrier carr){
+        
+        
+        /*
         System.out.println("carrier");
+        
+        System.out.println("cruiser: "+carr.isTouching(AICruiser.class));
+        System.out.println("sub: "+carr.isTouching(AISub.class));
+        System.out.println("battle: "+carr.isTouching(AIBattle.class));
+        System.out.println("patrol: "+carr.isTouching(AIPatrol.class));
+        
         for(Object element : carr.getIntersectingObjects(null))
         {
             System.out.println(element.toString());
@@ -74,7 +100,8 @@ public class AICarrier extends Actor
         while(carr.getIntersectingObjects(null).size() > 10 ){
           carr.setLocation(carr.getX()+(int)(Math.random()*10)-10, carr.getY()-(int)(Math.random()*10)-10);
           
-        }  
+        }
+        */
     }
     public static int[] placeCarrier(){
        String[][] CarrierOnBoard = new String[10][10];
@@ -183,4 +210,38 @@ public class AICarrier extends Actor
                 }
             } 
     }
+    
+    public void setCoords(AICarrier carr)
+    {
+        c1[0] = "1x" +(carr.getX());
+        c1[1] = " 1y" +(carr.getY());
+        if(carr.getRotation() == 0)
+        {
+            c2[0] = "2x" +(carr.getX()+30);
+            c2[1] = " 2y" +carr.getY();
+            c3[0] = "3x" +(carr.getX()+60);
+            c3[1] = " 3y" +carr.getY();
+            c4[0] = "4x" +(carr.getX()-60);
+            c4[1] = " 4y" +carr.getY();
+            c5[0] = "5x" +(carr.getX()-30);
+            c5[1] = " 5y" +carr.getY();
+        }
+        else
+        {
+            c2[0] = "2x" +carr.getX();
+            c2[1] = " 2y" +(carr.getY()+30);
+            c3[0] = "3x" +carr.getX();
+            c3[1] = " 3y" +(carr.getY()+60);
+            c4[0] = "4x" +carr.getX();
+            c4[1] = " 4y" +(carr.getY()-60);
+            c5[0] = "5x" +carr.getX();
+            c5[1] = " 5y" +(carr.getY()-30);
+        }
+        coords[0] = c1;
+        coords[1] = c2;
+        coords[2] = c3;
+        coords[3] = c4;
+        coords[4] = c5;
+    }
+    
 }
