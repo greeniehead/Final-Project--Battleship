@@ -78,7 +78,16 @@ public class AIBattle extends Actor
       
     }    
     public static void notOnTop(AIBattle bat){
+        
+        
+        /*
         System.out.println("battleship");
+        
+        System.out.println("cruiser: "+bat.isTouching(AICruiser.class));
+        System.out.println("sub: "+bat.isTouching(AISub.class));
+        System.out.println("patrol: "+bat.isTouching(AIPatrol.class));
+        System.out.println("carrier: "+bat.isTouching(AIBattle.class));
+        
         for(Object element : bat.getIntersectingObjects(null))
         {
             System.out.println(element.toString());
@@ -87,7 +96,8 @@ public class AIBattle extends Actor
         while(bat.getIntersectingObjects(null).size() > 8 ){
           bat.setLocation(bat.getX()+(int)(Math.random()*10)-10, bat.getY()-(int)(Math.random()*10)-10);
           
-        }  
+        }
+        */
     }
     public static int[] placeBattle(){
        String[][] BattleOnBoard = new String[10][10];

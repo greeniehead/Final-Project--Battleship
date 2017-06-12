@@ -7,4 +7,6 @@ comment2.params=
 comment2.target=int[]\ placeCarrier()
 comment3.params=carr
 comment3.target=void\ stayInGrid(AICarrier)
-numComments=4
+comment4.params=carr
+comment4.target=void\ setCoords(AICarrier)
+numComments=5

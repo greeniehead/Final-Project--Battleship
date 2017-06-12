@@ -81,7 +81,17 @@ public class AIPatrol extends Actor
         } */           
     }    
     public static void notOnTop(AIPatrol pat){
+        
+        
+        /*
         System.out.println("patrol");
+        
+        System.out.println("cruiser: "+pat.isTouching(AICruiser.class));
+        System.out.println("sub: "+pat.isTouching(AISub.class));
+        System.out.println("carrier: "+pat.isTouching(AICarrier.class));
+        System.out.println("battle: "+pat.isTouching(AIBattle.class));
+        
+        
         for(Object element : pat.getIntersectingObjects(null))
         {
             System.out.println(element.toString());
@@ -90,7 +100,8 @@ public class AIPatrol extends Actor
         while(pat.getIntersectingObjects(null).size() > 4 ){
           pat.setLocation(pat.getX()+(int)(Math.random()*10)-10, pat.getY()-(int)(Math.random()*10)-10);
           
-        }  
+        }
+        */
     }
     public static int[] placePatrol(){
        String[][] PatrolOnBoard = new String[10][10];

@@ -68,18 +68,39 @@ public class AISub extends Actor
         } */  
     }    
     public static void notOnTop(AISub sub ){
+<<<<<<< HEAD
         int i = 0;
+=======
+        
+        
+        
+        
+        
+        /*
+>>>>>>> origin/master
         System.out.println("sub");
+        
+        System.out.println("cruiser: "+sub.isTouching(AICruiser.class));
+        System.out.println("patrol: "+sub.isTouching(AIPatrol.class));
+        System.out.println("carrier: "+sub.isTouching(AICarrier.class));
+        System.out.println("battle: "+sub.isTouching(AIBattle.class));
+        
         for(Object element : sub.getIntersectingObjects(null))
         {
             System.out.println(element.toString());
         }
         while(sub.getIntersectingObjects(null).size() > 3 ){
           sub.setLocation(sub.getX()+(int)(Math.random()*10)-10, sub.getY()-(int)(Math.random()*10)-10);
+<<<<<<< HEAD
           System.out.println(i);
           i++;
          
         }  
+=======
+          
+        }
+        */
+>>>>>>> origin/master
     }
     public static int[] placeSub(){
        String[][] SubOnBoard = new String[10][10];
