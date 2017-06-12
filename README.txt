@@ -7,4 +7,5 @@
 * To reset the game and start a new match, you can click the blue button just above the red.
 * To view the win screen, you can click the green button.
 * To view the loss screen, you can click the blue button just above the green one.
-* If you want to view where the computer placed its ships, you can comment out lines 270-279 in the GameWorld class.
+* If you want to view where the computer placed its ships, you can comment out lines 235-244 in the GameWorld class.
+* The Win/Loss code is currently commented out but the class does exist.
