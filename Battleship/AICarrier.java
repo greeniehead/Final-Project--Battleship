@@ -68,7 +68,7 @@ public class AICarrier extends Actor
         }
         this.stayInGrid(this);
         this.setCoords(this);
-        for(String[] arrElement : coords)
+        /* for(String[] arrElement : coords)
         {
             for(String element : arrElement)
             {
@@ -76,7 +76,7 @@ public class AICarrier extends Actor
             }
             System.out.println();
         }
-        
+         */
         /* while(this.getIntersectingObjects(null).size() > 5 ){
           this.setLocation(this.getX()+(int)(Math.random()*10)-10, this.getY()-(int)(Math.random()*10)-10);
           
