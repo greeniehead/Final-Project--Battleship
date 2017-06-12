@@ -13,9 +13,7 @@ public class AISub extends Actor
     {
       GreenfootImage AISub;
       AISub = new GreenfootImage("sub2.fw.png");
-      setImage(AISub);      
-      AISub.setColor(Color.green);
-      AISub.fill();
+      setImage(AISub);
       while((this.getX()-80)%30 != 0)
         {
             this.setLocation(this.getX() + 1, this.getY());

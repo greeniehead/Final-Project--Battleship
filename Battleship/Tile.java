@@ -19,6 +19,7 @@ public class Tile extends Actor
         {
             if(Greenfoot.mouseClicked(this))
             {
+                
                 this.removeSelf();
                 GameWorld.setAIFiring(true);
             }
@@ -29,6 +30,7 @@ public class Tile extends Actor
     
     public void removeSelf()
     {
+        
         GameWorld.setFiring(false);
         getWorld().removeObject(this);
     }

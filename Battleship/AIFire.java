@@ -14,20 +14,22 @@ public class AIFire extends Actor
      */
     public void act() 
     {
-      if(GameWorld.getFiring() == false && GameWorld.getAIFiring() == true){ 
-      GameWorld.setAIFiring(true);
-      int x = AIFireMethod()[0];
-      int y = AIFireMethod()[1];
-      getWorld().addObject(new AIMiss(),x,y);
-      for(int i = 0; i < getWorld().getObjectsAt(x,y, null).size(); i++){
-          System.out.println(getWorld().getObjectsAt(x,y, null).get(i));
-          /*if(true){
-              getWorld().addObject(new AIHit(),x,y);
-          } */
+        if(GameWorld.getFiring() == false && GameWorld.getAIFiring() == true){ 
+            GameWorld.setAIFiring(true);
+            int x = AIFireMethod()[0];
+            int y = AIFireMethod()[1];
+            AIMiss aiMisss = new AIMiss();
+            getWorld().addObject(aiMisss,x,y);
+            //this.pleaseFNWork(aiMisss);
+            for(int i = 0; i < getWorld().getObjectsAt(x,y, null).size(); i++){
+                System.out.println(getWorld().getObjectsAt(x,y, null).get(i));
+                /*if(true){
+                /*    getWorld().addObject(new AIHit(),x,y);
+                } */
           
-      }
-      GameWorld.setAIFiring(false);
-    }
+            }
+            GameWorld.setAIFiring(false);
+        }
     }
     public static int[] AIFireMethod(){
         //GameWorld.addObject(miss4, 2 ,2);
@@ -39,5 +41,17 @@ public class AIFire extends Actor
         
         return XandY;
     }
-    }    
+    /*
+    public static void pleaseFNWork(AIMiss aiMissss)
+    {
+        if((aiMissss.isTouching(Carrier.class))||(aiMissss.isTouching(Cruiser.class))
+           ||(aiMissss.isTouching(Battle.class))||(aiMissss.isTouching(Patrol.class))
+           ||(aiMissss.isTouching(Submarine.class)))
+        {
+            AIHit aiHittt = new AIHit();
+            getWorld().addObject(aiHittt, aiMissss.getX(), aiMissss.getY());
+        }
+    }
+    */
+}    
 
