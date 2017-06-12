@@ -6,6 +6,7 @@ public class GameWorld extends World
 {
     public static boolean firing = false;
     public boolean game = true;
+    public static boolean AIfiring = false;
     
     public Patrol pt = new Patrol();
     public Submarine sub = new Submarine();
@@ -234,7 +235,7 @@ public class GameWorld extends World
             Hit hitttttt = new Hit();
             addObject(hitttttt, AIcarr.getX(), AIcarr.getY() +60);
         }
-        /*
+        
         for(int x = 50; x < 350; x += 30)
         {
             for(int y = 25; y < 325; y += 30)
@@ -243,7 +244,7 @@ public class GameWorld extends World
                 addObject(til2, x, y);
             }
         }
-        */
+        
          RestartLabel label = new RestartLabel("View Loss Screen");
         addObject(label, 425, 325);
         
@@ -264,7 +265,8 @@ public class GameWorld extends World
         
         Fire fireee = new Fire();
         addObject(fireee, 550, 200);
-
+        AIFire Aifire = new AIFire();
+        addObject(Aifire,550,250);
     }
     
     public void computer()//computer decision code goes here
@@ -307,21 +309,7 @@ public class GameWorld extends World
     }
     */
     
-    public void fire(boolean human, int x, int y)
-    {
-        
-        int x2 = x - 35;
-        if(human)
-        {
-            int y2 = y - 10;
-        }
-        else
-        {
-            int y2 = y - 360;
-        }
-        
-        removeObjects(getObjectsAt(x, y, null));
-    }
+    
     
     public static void setFiring(boolean fir)
     {
@@ -338,6 +326,23 @@ public class GameWorld extends World
     public static boolean getFiring()
     {
         return firing;
+    }
+    
+    public static void AIFire()
+    {
+        
+        //if(getAIfiring() == true){
+           // Miss miss4 = new Miss();
+           // addObject(miss4, AIFire.AIFireMethod()[0], 2);
+            //System.out.println("HI!!");
+        //}
+    }
+    public static void setAIFiring(boolean AIfir){
+        if(AIfir) AIfiring = true;
+        else AIfiring = false;
+    }
+    public static boolean getAIFiring(){
+        return AIfiring;
     }
     
 }

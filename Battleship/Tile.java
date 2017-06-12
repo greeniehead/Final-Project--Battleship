@@ -20,6 +20,7 @@ public class Tile extends Actor
             if(Greenfoot.mouseClicked(this))
             {
                 this.removeSelf();
+                GameWorld.setAIFiring(true);
             }
         }
 

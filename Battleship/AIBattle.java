@@ -83,6 +83,7 @@ public class AIBattle extends Actor
         {
             System.out.println(element.toString());
         }
+        System.out.println(bat.getIntersectingObjects(null).size());
         while(bat.getIntersectingObjects(null).size() > 8 ){
           bat.setLocation(bat.getX()+(int)(Math.random()*10)-10, bat.getY()-(int)(Math.random()*10)-10);
           
