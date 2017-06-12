@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Mon Jun 12 10:00:10 PDT 2017
+#Mon Jun 12 10:41:24 PDT 2017
 target24.type=ClassTarget
 target16.name=Tile
 target13.editor.width=900
@@ -81,6 +81,7 @@ target31.editor.y=20
 target31.editor.x=40
 dependency46.from=AISub
 dependency21.from=GameWorld
+class.WinLose.superclass=greenfoot.Actor
 target14.width=80
 target7.name=RestartLabel
 target2.width=80
